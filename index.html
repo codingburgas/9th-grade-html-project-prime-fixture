@@ -3,9 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Prime Fixture</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
+    <link rel="stylesheet" href="styles/global.css">
+
 </head>
 <body>
-    
+    <aside class="sidebar">
+        <header class="sidebarHeader">
+            <a href="#" class="headerLogo">
+                <img src="media/PrimeFixture.png" alt="primeFixtureLogo">
+            </a>
+            <button class="toggler sidebarToggler">
+                <!--Use a different case for the class because of the linking-->
+            <span class="material-symbols-outlined">chevron_left</span>
+            </button>
+        </header>
+
+        <nav class = "sidebarNav">
+            <ul class="navList primaryNav">
+                <li class = "navItem">
+                    <a href="#" class = "navLink">
+                        <span class="nav-icon material-symbols-outlined">dashboard</span>
+                        <span class="navLabel">Табло</span>
+                    </a>
+                    <span class="navTooltip">Табло</span>
+                </li>
+                <li class = "navItem">
+                    <a href="#" class = "navLink">
+                        <span class="nav-icon material-symbols-outlined">calendar_today</span>
+                        <span class="navLabel">Календар</span>
+                    </a>
+                    <span class="navTooltip">Календар</span>
+                </li>
+                <li class = "navItem">
+                    <a href="#" class = "navLink">
+                        <span class="nav-icon material-symbols-outlined">group</span>
+                        <span class="navLabel">Екип</span>
+                    </a>
+                    <span class="navTooltip">Екип</span>
+                </li>
+                <li class = "navItem">
+                    <a href="#" class = "navLink">
+                        <span class="nav-icon material-symbols-outlined">notifications</span>
+                        <span class="navLabel">Известия</span>
+                    </a>
+                    <span class="navTooltip">Известия</span>
+                </li>
+                <li class = "navItem">
+                    <a href="#" class = "navLink">
+                        <span class="nav-icon material-symbols-outlined">analytics</span>
+                        <span class="navLabel">Анализи</span>
+                    </a>
+                    <span class="navTooltip">Анализи</span>
+                </li>
+                <li class = "navItem">
+                    <a href="#" class = "navLink">
+                        <span class="nav-icon material-symbols-outlined">star</span>
+                        <span class="navLabel">Отметки</span>
+                    </a>
+                    <span class="navTooltip">Отметки</span>
+                </li>
+                <li class = "navItem">
+                    <a href="#" class = "navLink">
+                        <span class="nav-icon material-symbols-outlined">settings</span>
+                        <span class="navLabel">Настройки</span>
+                    </a>
+                    <span class="navTooltip">Настройки</span>
+                </li>
+            </ul>
+
+            <ul class="navList secondaryNav">
+                <li class = "navItem">
+                    <a href="#" class = "navLink">
+                        <span class="nav-icon material-symbols-outlined">account_circle</span>
+                        <span class="navLabel">Акаунт</span>
+                    </a>
+                    <span class="navTooltip">Акаунт</span>
+                </li>
+                <li class = "navItem">
+                    <a href="#" class = "navLink">
+                        <span class="nav-icon material-symbols-outlined">logout</span>
+                        <span class="navLabel">Изход</span>
+                    </a>
+                    <span class="navTooltip">Изход</span>
+            </ul>
+        </nav>
+    </aside>   
+    <script src="JS/sidebar.js"></script>
 </body>
 </html>
