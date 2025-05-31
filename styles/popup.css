@@ -1,0 +1,54 @@
+.pf-popup-bg {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.45);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pf-popup {
+    background: #23232e;
+    color: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+    padding: 32px 28px 24px 28px;
+    min-width: 280px;
+    max-width: 90vw;
+    text-align: center;
+    font-size: 1.1em;
+    position: relative;
+    animation: pfPopupIn 0.25s;
+}
+
+@keyframes pfPopupIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+}
+
+.pf-popup .pf-popup-title {
+    font-size: 1.25em;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #ff0000;
+}
+
+.pf-popup .pf-popup-btn {
+    margin-top: 18px;
+    padding: 8px 28px;
+    background: #ff0000;
+    color: #23232e;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.pf-popup .pf-popup-btn:hover {
+    background: #ff0000;
+    color: #fff;
+}

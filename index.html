@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +7,9 @@
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/sidebar.css">
     <link rel="stylesheet" href="styles/global.css">
-
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/popup.css">
+    <link rel="website icon" type="png" href="media/PrimeFixture.png">
 </head>
 <body>
     <aside class="sidebar">
@@ -17,57 +18,56 @@
                 <img src="media/PrimeFixture.png" alt="primeFixtureLogo">
             </a>
             <button class="toggler sidebarToggler">
-                <!--Use a different case for the class because of the linking-->
-            <span class="material-symbols-outlined">chevron_left</span>
+                <span class="material-symbols-outlined">chevron_left</span>
             </button>
         </header>
 
-        <nav class = "sidebarNav">
+        <nav class="sidebarNav">
             <ul class="navList primaryNav">
-                <li class = "navItem">
-                    <a href="#" class = "navLink">
+                <li class="navItem">
+                    <a href="#" class="navLink">
                         <span class="nav-icon material-symbols-outlined">dashboard</span>
                         <span class="navLabel">Табло</span>
                     </a>
                     <span class="navTooltip">Табло</span>
                 </li>
-                <li class = "navItem">
-                    <a href="#" class = "navLink">
+                <li class="navItem">
+                    <a href="#" class="navLink">
                         <span class="nav-icon material-symbols-outlined">calendar_today</span>
                         <span class="navLabel">Календар</span>
                     </a>
                     <span class="navTooltip">Календар</span>
                 </li>
-                <li class = "navItem">
-                    <a href="#" class = "navLink">
+                <li class="navItem">
+                    <a href="#" class="navLink">
                         <span class="nav-icon material-symbols-outlined">group</span>
                         <span class="navLabel">Екип</span>
                     </a>
                     <span class="navTooltip">Екип</span>
                 </li>
-                <li class = "navItem">
-                    <a href="#" class = "navLink">
+                <li class="navItem">
+                    <a href="#" class="navLink">
                         <span class="nav-icon material-symbols-outlined">notifications</span>
                         <span class="navLabel">Известия</span>
                     </a>
                     <span class="navTooltip">Известия</span>
                 </li>
-                <li class = "navItem">
-                    <a href="#" class = "navLink">
+                <li class="navItem">
+                    <a href="#" class="navLink">
                         <span class="nav-icon material-symbols-outlined">analytics</span>
                         <span class="navLabel">Анализи</span>
                     </a>
                     <span class="navTooltip">Анализи</span>
                 </li>
-                <li class = "navItem">
-                    <a href="#" class = "navLink">
+                <li class="navItem">
+                    <a href="#" class="navLink">
                         <span class="nav-icon material-symbols-outlined">star</span>
                         <span class="navLabel">Отметки</span>
                     </a>
                     <span class="navTooltip">Отметки</span>
                 </li>
-                <li class = "navItem">
-                    <a href="#" class = "navLink">
+                <li class="navItem">
+                    <a href="#" class="navLink">
                         <span class="nav-icon material-symbols-outlined">settings</span>
                         <span class="navLabel">Настройки</span>
                     </a>
@@ -76,22 +76,95 @@
             </ul>
 
             <ul class="navList secondaryNav">
-                <li class = "navItem">
-                    <a href="#" class = "navLink">
+                <li class="navItem">
+                    <a href="#" class="navLink accountBtn">
                         <span class="nav-icon material-symbols-outlined">account_circle</span>
                         <span class="navLabel">Акаунт</span>
                     </a>
                     <span class="navTooltip">Акаунт</span>
                 </li>
-                <li class = "navItem">
-                    <a href="#" class = "navLink">
+                <li class="navItem">
+                    <a href="#" class="navLink">
                         <span class="nav-icon material-symbols-outlined">logout</span>
                         <span class="navLabel">Изход</span>
                     </a>
                     <span class="navTooltip">Изход</span>
+                </li>
             </ul>
         </nav>
-    </aside>   
+
+        <section id="login">
+            <div class="login-box">
+                <button class="close-login-btn" type="button" aria-label="Затвори">&times;</button>
+                
+                <form id="login-form">
+                    <h2>Влизане</h2>
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="mail"></ion-icon>
+                        </span>
+                        <input type="email" required>
+                        <label>Имейл</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="lock-closed"></ion-icon>
+                        </span>
+                        <input type="password" required>
+                        <label>Парола</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label><input type="checkbox">Запомни ме</label>
+                        <a href="#">Забравена парола?</a>
+                    </div>
+                    <button type="submit">Влизане</button>
+                    <div class="register-link">
+                        <p>Нямаш акаунт? <a href="#" id="show-register">Регистрация</a></p>
+                    </div>
+                </form>
+                
+                <form id="register-form" style="display:none;">
+                    <h2>Регистрация</h2>
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="person"></ion-icon>
+                        </span>
+                        <input type="text" required>
+                        <label>Потребителско име</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="mail"></ion-icon>
+                        </span>
+                        <input type="email" required>
+                        <label>Имейл</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="lock-closed"></ion-icon>
+                        </span>
+                        <input type="password" required>
+                        <label>Парола</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="lock-open"></ion-icon>
+                        </span>
+                        <input type="password" required>
+                        <label>Потвърди парола</label>
+                    </div>
+                    <button type="submit">Регистрация</button>
+                    <div class="register-link">
+                        <p>Вече имаш акаунт? <a href="#" id="show-login">Вход</a></p>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </aside>
     <script src="JS/sidebar.js"></script>
-</body>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="JS/login-toggle.js"></script>
+    <script src="JS/login-db.js"></script>
+    </body>
 </html>
