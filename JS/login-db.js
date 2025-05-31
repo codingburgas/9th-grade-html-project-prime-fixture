@@ -19,11 +19,11 @@ document.addEventListener('DOMContentLoaded', function () {
     if (registerForm) {
         registerForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            const username = registerForm.querySelector('input[type="text"]').value.trim();
-            const email = registerForm.querySelector('input[type="email"]').value.trim();
-            const password = registerForm.querySelector('input[type="password"]').value;
-            const role = registerForm.querySelector('input[name="role"]:checked').value;
-            if (!username || !email || !password) {
+            const username = document.getElementById('reg-username').value.trim();
+            const email = document.getElementById('reg-email').value.trim();
+            const password = document.getElementById('reg-password').value;
+            const role = registerForm.querySelector('input[name="role"]:checked')?.value;
+            if (!username || !email || !password || !role) {
                 pfShowPopup('Попълни всички полета!', 'Грешка');
                 return;
             }
@@ -38,16 +38,31 @@ document.addEventListener('DOMContentLoaded', function () {
     if (loginForm) {
         loginForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            const email = loginForm.querySelector('input[type="email"]').value.trim();
-            const password = loginForm.querySelector('input[type="password"]').value;
+            const email = document.getElementById('login-email').value.trim();
+            const password = document.getElementById('login-password').value;
             const user = JSON.parse(localStorage.getItem('pf-user') || '{}');
             if (user.email === email && user.password === password) {
-                pfShowPopup('Успешен вход! Добре дошъл, ' + user.username + '!<br>Роля: ' + (user.role === 'worker' ? 'Работник' : 'User'), 'Успех');
+                pfShowPopup('Успешен вход! Добре дошъл, ' + user.username + '!<br>Роля: ' + (user.role === 'worker' ? 'Работник' : 'Потребител'), 'Успех');
                 loginForm.reset();
                 document.querySelector('#login').classList.remove('active');
             } else {
                 pfShowPopup('Грешен имейл или парола!', 'Грешка');
             }
+        });
+    }
+
+    const forgotForm = document.getElementById('forgot-password-form');
+    if (forgotForm) {
+        forgotForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('forgot-email').value.trim();
+            if (!email) {
+                pfShowPopup('Моля, въведи имейл!', 'Грешка');
+                return;
+            }
+            pfShowPopup('Ще получиш линк за възстановяване на паролата.', 'Изпратено');
+            forgotForm.reset();
+            document.getElementById('back-to-login').click();
         });
     }
 });

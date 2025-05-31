@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="styles/login.css">
     <link rel="stylesheet" href="styles/popup.css">
     <link rel="website icon" type="png" href="media/PrimeFixture.png">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
     <aside class="sidebar">
@@ -22,7 +24,6 @@
                 <span class="material-symbols-outlined">chevron_left</span>
             </button>
         </header>
-
         <nav class="sidebarNav">
             <ul class="navList primaryNav">
                 <li class="navItem">
@@ -75,7 +76,6 @@
                     <span class="navTooltip">Настройки</span>
                 </li>
             </ul>
-
             <ul class="navList secondaryNav">
                 <li class="navItem">
                     <a href="#" class="navLink accountBtn">
@@ -93,26 +93,24 @@
                 </li>
             </ul>
         </nav>
-
         <section id="login">
             <div class="login-box">
                 <button class="close-login-btn" type="button" aria-label="Затвори">&times;</button>
-                
                 <form id="login-form">
                     <h2>Влизане</h2>
                     <div class="input-box">
                         <span class="icon">
                             <ion-icon name="mail"></ion-icon>
                         </span>
-                        <input type="email" required>
-                        <label>Имейл</label>
+                        <input type="email" required id="login-email" placeholder=" ">
+                        <label for="login-email">Имейл</label>
                     </div>
                     <div class="input-box">
                         <span class="icon">
                             <ion-icon name="lock-closed"></ion-icon>
                         </span>
-                        <input type="password" required>
-                        <label>Парола</label>
+                        <input type="password" required id="login-password" placeholder=" ">
+                        <label for="login-password">Парола</label>
                     </div>
                     <div class="remember-forgot">
                         <label><input type="checkbox">Запомни ме</label>
@@ -123,36 +121,50 @@
                         <p>Нямаш акаунт? <a href="#" id="show-register">Регистрация</a></p>
                     </div>
                 </form>
-                
+                <div class="forgot-password-box" id="forgot-password-box" style="display:none;">
+                    <form id="forgot-password-form">
+                        <h2>Забравена парола?</h2>
+                        <div class="input-box">
+                            <span class="icon">
+                                <ion-icon name="mail"></ion-icon>
+                            </span>
+                            <input type="email" required id="forgot-email" placeholder=" ">
+                            <label for="forgot-email">Имейл</label>
+                        </div>
+                        <button type="submit">Изпрати</button>
+                        <div class="register-link">
+                            <p><a href="#" id="back-to-login">Назад към вход</a></p>
+                        </div>
+                    </form>
+                </div>
                 <form id="register-form" style="display:none;">
                     <h2>Регистрация</h2>
                     <div class="input-box">
                         <span class="icon">
                             <ion-icon name="person"></ion-icon>
                         </span>
-                        <input type="text" required>
-                        <label>Потребителско име</label>
+                        <input type="text" required id="reg-username" placeholder=" ">
+                        <label for="reg-username">Потребителско име</label>
                     </div>
                     <div class="input-box">
                         <span class="icon">
                             <ion-icon name="mail"></ion-icon>
                         </span>
-                        <input type="email" required>
-                        <label>Имейл</label>
+                        <input type="email" required id="reg-email" placeholder=" ">
+                        <label for="reg-email">Имейл</label>
                     </div>
                     <div class="input-box">
                         <span class="icon">
                             <ion-icon name="lock-closed"></ion-icon>
                         </span>
-                        <input type="password" required>
-                        <label>Парола</label>
+                        <input type="password" required id="reg-password" placeholder=" ">
+                        <label for="reg-password">Парола</label>
                     </div>
-                    <div class="input-box">
-                        <span class="icon">
-                            <ion-icon name="lock-open"></ion-icon>
-                        </span>
-                        <input type="password" required>
-                        <label>Потвърди парола</label>
+                    <div class="role-choice">
+                        <input type="radio" id="role-user" name="role" value="user" checked>
+                        <label for="role-user">Потребител</label>
+                        <input type="radio" id="role-worker" name="role" value="worker">
+                        <label for="role-worker">Работник</label>
                     </div>
                     <button type="submit">Регистрация</button>
                     <div class="register-link">
@@ -163,9 +175,7 @@
         </section>
     </aside>
     <script src="JS/sidebar.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="JS/login-toggle.js"></script>
     <script src="JS/login-db.js"></script>
-    </body>
+</body>
 </html>
