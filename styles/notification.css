@@ -1,0 +1,184 @@
+.parent {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    height: 100vh;           
+    margin-left: 270px;
+    transition: margin-left 0.4s ease;
+}
+
+.sidebar.collapsed + .parent {
+    margin-left: 85px; 
+}
+
+.div1 {
+    position: relative;
+    background-color: var(--background-clr);
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+    font-size: 2rem;
+    min-width: 1000px;
+    min-height: 800px;
+    text-align: center;
+}
+
+.bellIcon{
+    position:absolute;
+    top:25px;
+    left:35px;
+    color: var(--text-clr);
+    font-size:3rem;
+}
+
+.title{
+    position:absolute;
+    top: 20px;
+    left: 100px;
+    color: var(--text-clr);
+}
+
+.unreadCount{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top:35px;
+    left:260px;
+    background-color: #9b0a0a;
+    border-radius: 50%;
+}
+
+.filterButton {
+    position: absolute;
+    top: 32px;
+    right: 260px;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    gap: 8px;
+    border-radius: 12px;
+    background-color: #2a2a2a;
+    color: var(--text-clr);
+    cursor: pointer;
+    transition: 0.2s ease,  0.2s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.filterButton:hover {
+    background-color: #3a3a3a;; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.filterIcon, .arrowDown {
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.filterText {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.readallButton {
+    position: absolute;
+    justify-content: flex-start;
+    top: 32px;
+    right: 10px;
+    width: 240px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    gap: 8px;
+    border-radius: 12px;
+    background-color: #2a2a2a;
+    color: var(--text-clr);
+    cursor: pointer;
+    transition: 0.2s ease,  0.2s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.readallButton:hover {
+    background-color: #3a3a3a;; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.readallText {
+    padding-right:45px;
+    font-size: 24px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.notificationsGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 70px 0; 
+}
+
+.notificationCard {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    color: var(--text-clr);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+}
+
+.notificationHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notificationTitleGroup {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.notificationTitleGroup .dot {
+    width: 8px;
+    height: 8px;
+    background-color: #9b0a0a;
+    border-radius: 50%;
+}
+
+.notificationTimeAndAction {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px; 
+    color: #999;
+}
+
+.notificationBody {
+    text-align: left;
+    font-size: 16px; 
+    line-height: 22px; 
+    color: #ccc;
+}
+
+.deleteIcon {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    font-size: 19px; 
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.deleteIcon:hover {
+    color: #fff;
+}

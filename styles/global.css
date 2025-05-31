@@ -1,11 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
 }
-body{
+:root {
+    --background-clr: #1E1E1E;
+    --text-clr: #fff;
+    --secondarytext-clr: #1E1E1E;
+    --secondarybackground-clr: #fff;
+    --tertiarybackground-clr: #2e2b2b;
+}
+body {
     min-height: 100vh;
-   background: linear-gradient(270deg, #111111);
+    background: linear-gradient(135deg, #1A1A1A, #2A1B1B, #3C2A2A);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
 }
 
- 
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
