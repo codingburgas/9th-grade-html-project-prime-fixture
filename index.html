@@ -94,88 +94,88 @@
             </ul>
         </nav>
         <section id="login">
-            <div class="login-box">
-                <button class="close-login-btn" type="button" aria-label="Затвори">&times;</button>
-                <form id="login-form">
+            <div class="loginBox">
+                <button class="closeLoginBtn" type="button" aria-label="Затвори">&times;</button>
+                <form id="loginForm">
                     <h2>Влизане</h2>
-                    <div class="input-box">
+                    <div class="inputBox">
                         <span class="icon">
                             <ion-icon name="mail"></ion-icon>
                         </span>
-                        <input type="email" required id="login-email" placeholder=" ">
-                        <label for="login-email">Имейл</label>
+                        <input type="email" required id="loginEmail" placeholder=" ">
+                        <label for="loginEmail">Имейл</label>
                     </div>
-                    <div class="input-box">
+                    <div class="inputBox">
                         <span class="icon">
                             <ion-icon name="lock-closed"></ion-icon>
                         </span>
-                        <input type="password" required id="login-password" placeholder=" ">
-                        <label for="login-password">Парола</label>
+                        <input type="password" required id="loginPassword" placeholder=" ">
+                        <label for="loginPassword">Парола</label>
                     </div>
-                    <div class="remember-forgot">
+                    <div class="rememberForgot">
                         <label><input type="checkbox">Запомни ме</label>
                         <a href="#">Забравена парола?</a>
                     </div>
                     <button type="submit">Влизане</button>
-                    <div class="register-link">
-                        <p>Нямаш акаунт? <a href="#" id="show-register">Регистрация</a></p>
+                    <div class="registerLink">
+                        <p>Нямаш акаунт? <a href="#" id="showRegister">Регистрация</a></p>
                     </div>
                 </form>
-                <div class="forgot-password-box" id="forgot-password-box" style="display:none;">
-                    <form id="forgot-password-form">
+                <div class="forgotPasswordBox" id="forgotPasswordBox" style="display:none;">
+                    <form id="forgotPasswordForm">
                         <h2>Забравена парола?</h2>
-                        <div class="input-box">
+                        <div class="inputBox">
                             <span class="icon">
                                 <ion-icon name="mail"></ion-icon>
                             </span>
-                            <input type="email" required id="forgot-email" placeholder=" ">
-                            <label for="forgot-email">Имейл</label>
+                            <input type="email" required id="forgotEmail" placeholder=" ">
+                            <label for="forgotEmail">Имейл</label>
                         </div>
                         <button type="submit">Изпрати</button>
-                        <div class="register-link">
-                            <p><a href="#" id="back-to-login">Назад към вход</a></p>
+                        <div class="registerLink">
+                            <p><a href="#" id="backToLogin">Назад към вход</a></p>
                         </div>
                     </form>
                 </div>
-                <form id="register-form" style="display:none;">
+                <form id="registerForm" style="display:none;">
                     <h2>Регистрация</h2>
-                    <div class="input-box">
+                    <div class="inputBox">
                         <span class="icon">
                             <ion-icon name="person"></ion-icon>
                         </span>
-                        <input type="text" required id="reg-username" placeholder=" ">
-                        <label for="reg-username">Потребителско име</label>
+                        <input type="text" required id="regUsername" placeholder=" ">
+                        <label for="regUsername">Потребителско име</label>
                     </div>
-                    <div class="input-box">
+                    <div class="inputBox">
                         <span class="icon">
                             <ion-icon name="mail"></ion-icon>
                         </span>
-                        <input type="email" required id="reg-email" placeholder=" ">
-                        <label for="reg-email">Имейл</label>
+                        <input type="email" required id="regEmail" placeholder=" ">
+                        <label for="regEmail">Имейл</label>
                     </div>
-                    <div class="input-box">
+                    <div class="inputBox">
                         <span class="icon">
                             <ion-icon name="lock-closed"></ion-icon>
                         </span>
-                        <input type="password" required id="reg-password" placeholder=" ">
-                        <label for="reg-password">Парола</label>
+                        <input type="password" required id="regPassword" placeholder=" ">
+                        <label for="regPassword">Парола</label>
                     </div>
-                    <div class="role-choice">
-                        <input type="radio" id="role-user" name="role" value="user" checked>
-                        <label for="role-user">Потребител</label>
-                        <input type="radio" id="role-worker" name="role" value="worker">
-                        <label for="role-worker">Работник</label>
+                    <div class="roleChoice">
+                        <input type="radio" id="roleUser" name="role" value="user" checked>
+                        <label for="roleUser">Потребител</label>
+                        <input type="radio" id="roleWorker" name="role" value="worker">
+                        <label for="roleWorker">Работник</label>
                     </div>
                     <button type="submit">Регистрация</button>
-                    <div class="register-link">
-                        <p>Вече имаш акаунт? <a href="#" id="show-login">Вход</a></p>
+                    <div class="registerLink">
+                        <p>Вече имаш акаунт? <a href="#" id="showLogin">Вход</a></p>
                     </div>
                 </form>
             </div>
         </section>
     </aside>
     <script src="JS/sidebar.js"></script>
-    <script src="JS/login-toggle.js"></script>
-    <script src="JS/login-db.js"></script>
+    <script src="JS/loginToggle.js"></script>
+    <script src="JS/loginDb.js"></script>
 </body>
 </html>

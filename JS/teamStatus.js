@@ -1,21 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
     const statuses = [
-        {cls: 'on-duty-dot', title: 'На линия'},
-        {cls: 'on-case-dot', title: 'На случай'},
-        {cls: 'off-duty-dot', title: 'Отсъства'}
+        {cls: 'onDutyDot', title: 'На линия'},
+        {cls: 'onCaseDot', title: 'На случай'},
+        {cls: 'offDutyDot', title: 'Отсъства'}
     ];
  
-    document.querySelectorAll('.team-member').forEach(member => {
-        if (!member.querySelector('.status-btn')) {
+    document.querySelectorAll('.teamMember').forEach(member => {
+        if (!member.querySelector('.statusBtn')) {
             const btn = document.createElement('button');
-            btn.className = 'status-btn';
+            btn.className = 'statusBtn';
             btn.textContent = 'Смени статус';
             btn.style.marginTop = '10px';
             member.appendChild(btn);
         }
-        const btn = member.querySelector('.status-btn');
+        const btn = member.querySelector('.statusBtn');
         btn.addEventListener('click', () => {
-            let dot = member.querySelector('.on-duty-dot, .on-case-dot, .off-duty-dot');
+            let dot = member.querySelector('.onDutyDot, .onCaseDot, .offDutyDot');
             let current = statuses.findIndex(s => dot.classList.contains(s.cls));
             let next = (current + 1) % statuses.length;
             dot.className = statuses[next].cls;

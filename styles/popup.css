@@ -1,4 +1,4 @@
-.pf-popup-bg {
+.pfPopupBg {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
     width: 100vw;
@@ -10,7 +10,7 @@
     justify-content: center;
 }
 
-.pf-popup {
+.pfPopup {
     background: #23232e;
     color: #fff;
     border-radius: 18px;
@@ -29,14 +29,14 @@
     to   { transform: scale(1); opacity: 1; }
 }
 
-.pf-popup .pf-popup-title {
+.pfPopup .pfPopup-title {
     font-size: 1.25em;
     font-weight: 700;
     margin-bottom: 12px;
     color: #ff0000;
 }
 
-.pf-popup .pf-popup-btn {
+.pfPopup .pfPopupBtn {
     margin-top: 18px;
     padding: 8px 28px;
     background: #ff0000;
@@ -48,7 +48,7 @@
     cursor: pointer;
     transition: background 0.2s;
 }
-.pf-popup .pf-popup-btn:hover {
+.pfPopup .pfPopupBtn:hover {
     background: #ff0000;
     color: #fff;
 }

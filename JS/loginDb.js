@@ -1,46 +1,46 @@
 function pfShowPopup(message, title = "Съобщение") {
-    document.querySelectorAll('.pf-popup-bg').forEach(e => e.remove());
+    document.querySelectorAll('.pfPopupBg').forEach(e => e.remove());
     const bg = document.createElement('div');
-    bg.className = 'pf-popup-bg';
+    bg.className = 'pfPopupBg';
     bg.innerHTML = `
-        <div class="pf-popup">
-            <div class="pf-popup-title">${title}</div>
-            <div class="pf-popup-msg">${message}</div>
-            <button class="pf-popup-btn">OK</button>
+        <div class="pfPopup">
+            <div class="pfPopupTitle">${title}</div>
+            <div class="pfPopupMsg">${message}</div>
+            <button class="pfPopupBtn">OK</button>
         </div>
     `;
     document.body.appendChild(bg);
-    bg.querySelector('.pf-popup-btn').onclick = () => bg.remove();
+    bg.querySelector('.pfPopupBtn').onclick = () => bg.remove();
     bg.onclick = e => { if (e.target === bg) bg.remove(); };
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    const registerForm = document.getElementById('register-form');
+    const registerForm = document.getElementById('registerForm');
     if (registerForm) {
         registerForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            const username = document.getElementById('reg-username').value.trim();
-            const email = document.getElementById('reg-email').value.trim();
-            const password = document.getElementById('reg-password').value;
+            const username = document.getElementById('regUsername').value.trim();
+            const email = document.getElementById('regEmail').value.trim();
+            const password = document.getElementById('regPassword').value;
             const role = registerForm.querySelector('input[name="role"]:checked')?.value;
             if (!username || !email || !password || !role) {
                 pfShowPopup('Попълни всички полета!', 'Грешка');
                 return;
             }
-            localStorage.setItem('pf-user', JSON.stringify({ username, email, password, role }));
+            localStorage.setItem('pfUser', JSON.stringify({ username, email, password, role }));
             pfShowPopup('Успешна регистрация!', 'Успех');
             registerForm.reset();
-            document.getElementById('show-login').click();
+            document.getElementById('showLogin').click();
         });
     }
 
-    const loginForm = document.getElementById('login-form');
+    const loginForm = document.getElementById('loginForm');
     if (loginForm) {
         loginForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            const email = document.getElementById('login-email').value.trim();
-            const password = document.getElementById('login-password').value;
-            const user = JSON.parse(localStorage.getItem('pf-user') || '{}');
+            const email = document.getElementById('loginEmail').value.trim();
+            const password = document.getElementById('loginPassword').value;
+            const user = JSON.parse(localStorage.getItem('pfUser') || '{}');
             if (user.email === email && user.password === password) {
                 pfShowPopup('Успешен вход! Добре дошъл, ' + user.username + '!<br>Роля: ' + (user.role === 'worker' ? 'Работник' : 'Потребител'), 'Успех');
                 loginForm.reset();
@@ -51,18 +51,18 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    const forgotForm = document.getElementById('forgot-password-form');
+    const forgotForm = document.getElementById('forgotPasswordForm');
     if (forgotForm) {
         forgotForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            const email = document.getElementById('forgot-email').value.trim();
+            const email = document.getElementById('forgotEmail').value.trim();
             if (!email) {
                 pfShowPopup('Моля, въведи имейл!', 'Грешка');
                 return;
             }
             pfShowPopup('Ще получиш линк за възстановяване на паролата.', 'Изпратено');
             forgotForm.reset();
-            document.getElementById('back-to-login').click();
+            document.getElementById('backToLogin').click();
         });
     }
 });

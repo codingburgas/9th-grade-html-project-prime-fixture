@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
    
     const accountBtns = document.querySelectorAll('.accountBtn');
     const loginSection = document.getElementById('login');
-    const closeBtn = document.querySelector('.close-login-btn');
+    const closeBtn = document.querySelector('.closeLoginBtn');
     accountBtns.forEach(function(btn) {
         btn.addEventListener('click', function(e) {
             e.preventDefault();
@@ -16,10 +16,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     
-    const showRegister = document.getElementById('show-register');
-    const showLogin = document.getElementById('show-login');
-    const loginForm = document.getElementById('login-form');
-    const registerForm = document.getElementById('register-form');
+    const showRegister = document.getElementById('showRegister');
+    const showLogin = document.getElementById('showLogin');
+    const loginForm = document.getElementById('loginForm');
+    const registerForm = document.getElementById('registerForm');
     if (showRegister && showLogin && loginForm && registerForm) {
         showRegister.addEventListener('click', function(e) {
             e.preventDefault();
@@ -34,13 +34,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 document.addEventListener('DOMContentLoaded', function () {
-    const showRegister = document.getElementById('show-register');
-    const showLogin = document.getElementById('show-login');
-    const loginForm = document.getElementById('login-form');
-    const registerForm = document.getElementById('register-form');
-    const forgotBox = document.getElementById('forgot-password-box');
-    const forgotLink = document.querySelector('.remember-forgot a');
-    const backToLogin = document.getElementById('back-to-login');
+    const showRegister = document.getElementById('showRegister');
+    const showLogin = document.getElementById('showLogin');
+    const loginForm = document.getElementById('loginForm');
+    const registerForm = document.getElementById('registerForm');
+    const forgotBox = document.getElementById('forgotPasswordBox');
+    const forgotLink = document.querySelector('.rememberForgot a');
+    const backToLogin = document.getElementById('backToLogin');
 
     if (showRegister && registerForm && loginForm) {
         showRegister.addEventListener('click', function(e) {
