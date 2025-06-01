@@ -21,6 +21,7 @@
     min-width: 1000px;
     min-height: 800px;
     text-align: center;
+    overflow: hidden;
 }
 
 .bellIcon{
@@ -46,6 +47,12 @@
     left:260px;
     background-color: #9b0a0a;
     border-radius: 50%;
+    color: #fff;
+    display: flex;                    
+    align-items: center;             
+    justify-content: center;         
+    font-size: 25px;                 
+    font-weight: bold;  
 }
 
 .filterButton {
@@ -118,7 +125,9 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 16px;
-    padding: 70px 0; 
+    padding: 0 0 20px 0;
+    max-height: 600px;
+    overflow-y: auto;
 }
 
 .notificationCard {
@@ -131,6 +140,20 @@
     flex-direction: column;
     gap: 12px;
     position: relative;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.notificationCard[data-read="true"] {
+    background-color: #3d3b3b; 
+    opacity: 0.7;
+}
+
+.notificationCard.fade-out {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
 }
 
 .notificationHeader {
@@ -181,4 +204,62 @@
 
 .deleteIcon:hover {
     color: #fff;
+}
+
+.checkIcon{
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.checkIcon:hover{
+    color: #fff;
+}
+
+.filterPopup {
+    position: absolute;
+    top: 90px;
+    right: 260px;
+    background-color: #1e1e1e;
+    color: var(--text-clr);
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+.filterPopup label {
+    display: flex;
+    gap:6px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.notificationScrollArea {
+    flex: 1; 
+    max-height: 100%;
+    overflow-y: auto;
+    margin-top: 70px; 
+    border-radius: 12px;
+    background-color: #1c1c1c;
+    padding-right: 8px; 
+}
+.notificationScrollArea::-webkit-scrollbar {
+    width: 10px;
+}
+
+.notificationScrollArea::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #555, #777);
+    border-radius: 8px;
+    border: 2px solid #1c1c1c;
+}
+
+.notificationScrollArea::-webkit-scrollbar-track {
+    background: #1c1c1c;
+}
+
+
+.notificationScrollArea {
+    scrollbar-width: thin;
+    scrollbar-color: #777 #1c1c1c;
 }

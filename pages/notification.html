@@ -106,9 +106,16 @@
                 <span class="checkIcon material-symbols-outlined">check</span>
                 <span class="readallText">Прочети всичкo</span>
             </div>
+        <div class="filterPopup" style="display: none;">
+            <label><input type="checkbox" class="filterOption" value="system" checked> Системни</label>
+            <label><input type="checkbox" class="filterOption" value="team" checked> Екип</label>
+            <label><input type="checkbox" class="filterOption" value="meeting" checked> Срещи</label>
+            <label><input type="checkbox" class="filterOption" value="message" checked> Съобщения</label>
         </div>
+        </div>
+        <div class="notificationScrollArea">
         <div class="notificationsGrid">
-        <div class="notificationCard">
+        <div class="notificationCard" data-tag="system" data-read="false">
     <div class="notificationHeader">
         <div class="notificationTitleGroup">
             <span class="material-symbols-outlined">notifications</span>
@@ -117,7 +124,7 @@
         </div>
         <div class="notificationTimeAndAction">
             <span>2 часа</span>
-            <span class="material-symbols-outlined">check</span>
+            <span class="material-symbols-outlined checkIcon">check</span>
         </div>
     </div>
     <div class="notificationBody">
@@ -126,16 +133,16 @@
     <span class="material-symbols-outlined deleteIcon">delete</span>
 </div>
 
-<div class="notificationCard">
+<div class="notificationCard" data-tag="team" data-read="false">
     <div class="notificationHeader">
         <div class="notificationTitleGroup">
             <span class="material-symbols-outlined">group</span>
-            <span>Покана за екип</span>
+            <span>Нова програма за екипа</span>
             <span class="dot"></span>
         </div>
         <div class="notificationTimeAndAction">
             <span>5 часа</span>
-            <span class="material-symbols-outlined">check</span>
+            <span class="material-symbols-outlined checkIcon">check</span>
         </div>
     </div>
     <div class="notificationBody">
@@ -144,15 +151,16 @@
     <span class="material-symbols-outlined deleteIcon">delete</span>
 </div>
 
-<div class="notificationCard">
+<div class="notificationCard" data-tag="meeting" data-read="false">
     <div class="notificationHeader">
         <div class="notificationTitleGroup">
             <span class="material-symbols-outlined">schedule</span>
             <span>Напомняне за среща</span>
+            <span class="dot"></span>
         </div>
         <div class="notificationTimeAndAction">
             <span>1 ден</span>
-            <span class="material-symbols-outlined">check</span>
+            <span class="material-symbols-outlined checkIcon">check</span>
         </div>
     </div>
     <div class="notificationBody">
@@ -161,15 +169,16 @@
     <span class="material-symbols-outlined deleteIcon">delete</span>
 </div>
 
-<div class="notificationCard">
+<div class="notificationCard" data-tag="message" data-read="false">
     <div class="notificationHeader">
         <div class="notificationTitleGroup">
             <span class="material-symbols-outlined">chat</span>
             <span>Ново съобщение</span>
+            <span class="dot"></span>
         </div>
         <div class="notificationTimeAndAction">
             <span>2 дни</span>
-            <span class="material-symbols-outlined">check</span>
+            <span class="material-symbols-outlined checkIcon">check</span>
         </div>
     </div>
     <div class="notificationBody">
@@ -177,8 +186,43 @@
     </div>
     <span class="material-symbols-outlined deleteIcon">delete</span>
 </div>
+<div class="notificationCard" data-tag="team" data-read="false">
+    <div class="notificationHeader">
+        <div class="notificationTitleGroup">
+            <span class="material-symbols-outlined">group</span>
+            <span>Нови документи</span>
+            <span class="dot"></span>
+        </div>
+        <div class="notificationTimeAndAction">
+            <span>2 дни</span>
+            <span class="material-symbols-outlined checkIcon">check</span>
+        </div>
     </div>
+    <div class="notificationBody">
+        Иван Иванов качи нов документ в групата.
     </div>
+    <span class="material-symbols-outlined deleteIcon">delete</span>
+</div>
+<div class="notificationCard" data-tag="meeting" data-read="false">
+    <div class="notificationHeader">
+        <div class="notificationTitleGroup">
+            <span class="material-symbols-outlined">schedule</span>
+            <span>Добавено ново събитие</span>
+            <span class="dot"></span>
+        </div>
+        <div class="notificationTimeAndAction">
+            <span>3 дни</span>
+            <span class="material-symbols-outlined checkIcon">check</span>
+        </div>
+    </div>
+    <div class="notificationBody">
+        Добавено ново събитие в календара: Обучение по безопасност.
+    </div>
+    <span class="material-symbols-outlined deleteIcon">delete</span>
+</div>
+    </div>
+</div>
     <script src="../JS/sidebar.js"></script>
+    <script src="../JS/notification.js"></script>
 </body>
 </html>
