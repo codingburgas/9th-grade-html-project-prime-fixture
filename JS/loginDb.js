@@ -28,6 +28,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
             localStorage.setItem('pfUser', JSON.stringify({ username, email, password, role }));
+            // Записваме и за settings.js:
+            localStorage.setItem('user', JSON.stringify({
+                name: username,
+                email: email,
+                role: role === 'worker' ? 'Работник' : 'Потребител',
+                phone: "",
+                image: ""
+            }));
             pfShowPopup('Успешна регистрация!', 'Успех');
             registerForm.reset();
             document.getElementById('showLogin').click();
@@ -43,6 +51,14 @@ document.addEventListener('DOMContentLoaded', function () {
             const user = JSON.parse(localStorage.getItem('pfUser') || '{}');
             if (user.email === email && user.password === password) {
                 pfShowPopup('Успешен вход! Добре дошъл, ' + user.username + '!<br>Роля: ' + (user.role === 'worker' ? 'Работник' : 'Потребител'), 'Успех');
+                // Записваме и за settings.js:
+                localStorage.setItem('user', JSON.stringify({
+                    name: user.username,
+                    email: user.email,
+                    role: user.role === 'worker' ? 'Работник' : 'Потребител',
+                    phone: user.phone || "",
+                    image: user.image || ""
+                }));
                 loginForm.reset();
                 document.querySelector('#login').classList.remove('active');
             } else {

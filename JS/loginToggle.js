@@ -1,39 +1,33 @@
 document.addEventListener('DOMContentLoaded', function () {
-   
+    const logoutBtn = document.getElementById('logoutBtn');
     const accountBtns = document.querySelectorAll('.accountBtn');
     const loginSection = document.getElementById('login');
     const closeBtn = document.querySelector('.closeLoginBtn');
+
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            localStorage.removeItem('user');
+            localStorage.removeItem('pfUser');
+            if (loginSection) {
+                loginSection.classList.add('active');
+            }
+        });
+    }
+
     accountBtns.forEach(function(btn) {
         btn.addEventListener('click', function(e) {
             e.preventDefault();
-            loginSection.classList.add('active');
+            if (loginSection) loginSection.classList.add('active');
         });
     });
-    if (closeBtn) {
+
+    if (closeBtn && loginSection) {
         closeBtn.addEventListener('click', function() {
             loginSection.classList.remove('active');
         });
     }
 
-    
-    const showRegister = document.getElementById('showRegister');
-    const showLogin = document.getElementById('showLogin');
-    const loginForm = document.getElementById('loginForm');
-    const registerForm = document.getElementById('registerForm');
-    if (showRegister && showLogin && loginForm && registerForm) {
-        showRegister.addEventListener('click', function(e) {
-            e.preventDefault();
-            loginForm.style.display = 'none';
-            registerForm.style.display = 'block';
-        });
-        showLogin.addEventListener('click', function(e) {
-            e.preventDefault();
-            registerForm.style.display = 'none';
-            loginForm.style.display = 'block';
-        });
-    }
-});
-document.addEventListener('DOMContentLoaded', function () {
     const showRegister = document.getElementById('showRegister');
     const showLogin = document.getElementById('showLogin');
     const loginForm = document.getElementById('loginForm');
@@ -58,7 +52,6 @@ document.addEventListener('DOMContentLoaded', function () {
             if (forgotBox) forgotBox.style.display = 'none';
         });
     }
-
     if (forgotLink && forgotBox && loginForm && registerForm) {
         forgotLink.addEventListener('click', function(e) {
             e.preventDefault();
@@ -67,7 +60,6 @@ document.addEventListener('DOMContentLoaded', function () {
             forgotBox.style.display = 'flex';
         });
     }
- 
     if (backToLogin && forgotBox && loginForm) {
         backToLogin.addEventListener('click', function(e) {
             e.preventDefault();

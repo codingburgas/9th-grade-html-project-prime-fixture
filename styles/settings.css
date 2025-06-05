@@ -1,0 +1,174 @@
+body {
+    background: linear-gradient(120deg, #1a1010 0%, #23181a 100%);
+    min-height: 100vh;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 48px 0 32px 0;
+    background: transparent;
+}
+
+.settings-section {
+    width: 100%;
+    max-width: 440px;
+    background: rgba(30, 18, 25, 0.98);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px 0 rgba(45, 29, 29, 0.13);
+    padding: 36px 32px 28px 32px;
+    color: #fff;
+    font-size: 1.08em;
+    margin-top: 32px;
+    animation: fadeIn 0.8s;
+    border: 2px solid #2d1b1b;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(40px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+.settings-section h2 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #fff;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px #2d1b1b;
+    font-size: 2em;
+    animation: popIn 0.7s;
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.8); opacity: 0;}
+    80% { transform: scale(1.05);}
+    100% { transform: scale(1); opacity: 1;}
+}
+
+.settings-section h3 {
+    margin-top: 18px;
+    margin-bottom: 10px;
+    color: #ff2d2d;
+    font-size: 1.1em;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 4px #23181a;
+}
+
+.profile-settings > div {
+    margin-bottom: 18px;
+}
+
+#profileImagePreview {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+     aspect-ratio: 1 / 1;
+    border: 2px solid #ff2d2d;
+    display: block;
+    margin: 0 auto 10px auto;
+    box-shadow: 0 2px 12px 0 rgba(45,29,29,0.15);
+    transition: box-shadow 0.3s, border-color 0.3s;
+    background: #1a1010;
+}
+#profileImagePreview:hover {
+    box-shadow: 0 4px 24px 0 rgb(255, 30, 30);
+    border-color: #fff;
+}
+
+.profile-settings label,
+.notification-settings label,
+.personalization-settings label {
+    display: block;
+    margin-bottom: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+    color: #fff;
+}
+
+.settings-section input[type="text"],
+.settings-section input[type="email"],
+.settings-section input[type="tel"],
+.settings-section select {
+    width: 100%;
+    padding: 8px 10px;
+    margin-top: 4px;
+    border-radius: 8px;
+    border: 1.5px solid #2d1b1b;
+    background: #23181a;
+    color: #fff;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 6px 0 rgba(45,29,29,0.07);
+}
+
+.settings-section input[type="text"]:focus,
+.settings-section input[type="email"]:focus,
+.settings-section input[type="tel"]:focus,
+.settings-section select:focus {
+    border-color: #ff2d2d;
+    box-shadow: 0 2px 12px 0 rgba(255,45,45,0.13);
+}
+
+.settings-section input[type="file"] {
+    margin-top: 8px;
+    color: #fff;
+}
+
+.settings-section button {
+    background: linear-gradient(90deg, #2d1b1b 60%, #ff2d2d 100%);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 24px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+    box-shadow: 0 2px 8px 0 rgba(45,29,29,0.10);
+    letter-spacing: 0.5px;
+}
+.settings-section button:hover {
+    background: linear-gradient(90deg, #ff2d2d 0%, #2d1b1b 100%);
+    box-shadow: 0 4px 16px 0 rgba(45,29,29,0.18);
+    transform: translateY(-2px) scale(1.03);
+    color: #fff;
+}
+
+.settings-section input[type="checkbox"] {
+    accent-color: #ff2d2d;
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    vertical-align: middle;
+    transition: accent-color 0.2s;
+}
+
+.settings-section input[type="checkbox"]:hover {
+    accent-color: #fff;
+}
+
+::-webkit-input-placeholder { color: #bbb; }
+::-moz-placeholder { color: #bbb; }
+:-ms-input-placeholder { color: #bbb; }
+::placeholder { color: #bbb; }
+
+@media (max-width: 700px) {
+    .settings-section {
+        max-width: 98vw;
+        padding: 18px 6vw 18px 6vw;
+    }
+    .main-content {
+        padding: 16px 0;
+    }
+}

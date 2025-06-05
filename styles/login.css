@@ -29,11 +29,14 @@ section {
     justify-content: center;
     align-items: center;
     background: rgba(0,0,0,0.6);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s;
 }
-#login:not(.active) {
-    display: none;
+#login.active {
+    opacity: 1;
+    pointer-events: auto;
 }
-
 .loginBox {
     width: 650px;
     max-width: 98vw;
@@ -51,6 +54,13 @@ section {
     padding: 48px 40px 36px 40px;
     margin: 0;
     font-size: 1.1em;
+    transform: translateY(-40px) scale(0.98);
+    opacity: 0;
+    transition: transform 0.5s cubic-bezier(.4,1.4,.6,1), opacity 0.4s;
+}
+#login.active .loginBox {
+    transform: translateY(0) scale(1);
+    opacity: 1;
 }
 
 .closeLoginBtn {
@@ -156,16 +166,22 @@ h2 {
 
 button[type="submit"] {
     width: 100%;
-    height: 40px;
+    height: 48px;
     border: none;
     outline: none;
-    background: #fff;
-    color: #000000;
-    font-size: 1em;
+    background: #ff2d2d;
+    color: #fff;
+    font-size: 1.1em;
     cursor: pointer;
     border-radius: 40px;
-    font-weight: 500;
-    margin-top: 10px;
+    font-weight: 600;
+    margin-top: 16px;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px 0 rgba(255,45,45,0.10);
+}
+button[type="submit"]:hover {
+    background: #ff5e13;
+    box-shadow: 0 4px 16px 0 rgba(255,45,45,0.18);
 }
 
 .registerLink {
@@ -199,47 +215,84 @@ button[type="submit"] {
 .roleChoice label {
     padding: 8px 24px;
     border-radius: 20px;
-    background: #23232e;
-    color: #ff0000;
-    font-weight: 600;
-    cursor: pointer;
-    border: 2px solid #ff0000;
-    transition: background 0.2s, color 0.2s;
-    font-size: 1em;
-}
-
-.roleChoice input[type="radio"]:checked + label {
-    background: #ff0000;
-    color: #23232e;
-    border-color: #ff0000;
-}
-button[type="submit"] {
-    width: 100%;
-    height: 48px;
-    border: none;
-    outline: none;
-    background: #ff2d2d;
-    color: #fff;
-    font-size: 1.1em;
-    cursor: pointer;
-    border-radius: 40px;
-    font-weight: 600;
-    margin-top: 16px;
-    transition: background 0.2s;
-}
-button[type="submit"]:hover {
-    background: #ff5e13;
-}
-
-.roleChoice label {
     background: #2a1818;
     color: #ff2d2d;
+    font-weight: 600;
+    cursor: pointer;
     border: 2px solid #ff2d2d;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    font-size: 1em;
+    box-shadow: 0 1px 4px 0 rgba(255,45,45,0.08);
 }
+
 .roleChoice input[type="radio"]:checked + label {
     background: #ff2d2d;
     color: #fff;
     border-color: #ff2d2d;
+    box-shadow: 0 2px 8px 0 rgba(255,45,45,0.18);
+}
+
+.registerForgotLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 18px 0 0 0;
+    font-size: 0.98em;
+}
+.registerForgotLinks a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+.registerForgotLinks a:hover {
+    text-decoration: underline;
+    color: #ff2d2d;
+}
+.or-separator {
+    color: #fff;
+    opacity: 0.7;
+    font-weight: 400;
+}
+
+.login-form,
+.register-form {
+    opacity: 0;
+    transform: translateX(60px) scale(0.98);
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    transition: opacity 0.5s cubic-bezier(.4,1.4,.6,1), transform 0.5s cubic-bezier(.4,1.4,.6,1);
+    z-index: 1;
+}
+
+.login-form.active {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    pointer-events: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.register-form.active {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    pointer-events: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.login-form.switching-left {
+    opacity: 0;
+    transform: translateX(-60px) scale(0.98);
+    pointer-events: none;
+}
+
+.register-form.switching-right {
+    opacity: 0;
+    transform: translateX(60px) scale(0.98);
+    pointer-events: none;
 }
 
 @media (max-width: 600px) {
