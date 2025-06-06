@@ -12,92 +12,94 @@
 </head>
 <body>
     <div class="layout">
-        <aside class="sidebar">
-            <header class="sidebarHeader">
-                <a href="../index.html" class="headerLogo">
-                    <img src="../media/PrimeFixture.png" alt="primeFixtureLogo">
-                </a>
-                <button class="toggler sidebarToggler">
-                    <span class="material-symbols-outlined">chevron_left</span>
-                </button>
-            </header>
-            <nav class="sidebarNav">
-                <ul class="navList primaryNav">
-                    <li class="navItem">
-                        <a href="../index.html" class="navLink">
-                            <span class="nav-icon material-symbols-outlined">dashboard</span>
-                            <span class="navLabel">Табло</span>
-                        </a>
-                        <span class="navTooltip">Табло</span>
-                    </li>
-                    <li class="navItem">
-                        <a href="calendar.html" class="navLink">
-                            <span class="nav-icon material-symbols-outlined">calendar_today</span>
-                            <span class="navLabel">Календар</span>
-                        </a>
-                        <span class="navTooltip">Календар</span>
-                    </li>
-                    <li class="navItem">
-                        <a href="team.html" class="navLink">
-                            <span class="nav-icon material-symbols-outlined">group</span>
-                            <span class="navLabel">Екип</span>
-                        </a>
-                        <span class="navTooltip">Екип</span>
-                    </li>
-                    <li class="navItem">
-                        <a href="map.html" class="navLink">
-                            <span class="nav-icon material-symbols-outlined">public</span>
-                            <span class="navLabel">Карта</span>
-                        </a>
-                        <span class="navTooltip">Карта</span>
-                    </li>
-                    <li class="navItem">
-                        <a href="notification.html" class="navLink">
-                            <span class="nav-icon material-symbols-outlined">notifications</span>
-                            <span class="navLabel">Известия</span>
-                        </a>
-                        <span class="navTooltip">Известия</span>
-                    </li>
-                    <li class="navItem">
-                        <a href="analytics.html" class="navLink">
-                            <span class="nav-icon material-symbols-outlined">analytics</span>
-                            <span class="navLabel">Анализи</span>
-                        </a>
-                        <span class="navTooltip">Анализи</span>
-                    </li>
-                    <li class="navItem">
-                        <a href="marks.html" class="navLink">
-                            <span class="nav-icon material-symbols-outlined">star</span>
-                            <span class="navLabel">Отметки</span>
-                        </a>
-                        <span class="navTooltip">Отметки</span>
-                    </li>
-                    <li class="navItem">
-                        <a href="settings.html" class="navLink active">
-                            <span class="nav-icon material-symbols-outlined">settings</span>
-                            <span class="navLabel">Настройки</span>
-                        </a>
-                        <span class="navTooltip">Настройки</span>
-                    </li>
-                </ul>
-                <ul class="navList secondaryNav">
-                    <li class="navItem">
-                        <a href="#" id="goToAccount" class="navLink">
-                            <span class="nav-icon material-symbols-outlined">account_circle</span>
-                            <span class="navLabel">Акаунт</span>
-                        </a>
-                        <span class="navTooltip">Акаунт</span>
-                    </li>
-                    <li class="navItem">
-                        <a href="#" id="logoutBtn" class="navLink">
-                            <span class="nav-icon material-symbols-outlined">logout</span>
-                            <span class="navLabel">Изход</span>
-                        </a>
-                        <span class="navTooltip">Изход</span>
-                    </li>
-                </ul>
-            </nav>
-        </aside>
+    <aside class="sidebar">
+        <header class="sidebarHeader">
+            <a href="../index.html" class="headerLogo">
+                <img src="../media/PrimeFixture.png" alt="primeFixtureLogo">
+            </a>
+            <button class="toggler sidebarToggler">
+                <!--Use a different case for the class because of the linking-->
+            <span class="material-symbols-outlined">chevron_left</span>
+            </button>
+        </header>
+
+        <nav class = "sidebarNav">
+            <ul class="navList primaryNav">
+                <li class = "navItem">
+                    <a href="#" class = "navLink">
+                        <span class="nav-icon material-symbols-outlined">dashboard</span>
+                        <span class="navLabel">Табло</span>
+                    </a>
+                    <span class="navTooltip">Табло</span>
+                </li>
+                <li class = "navItem">
+                    <a href="../pages/incidents.html" class = "navLink">
+                        <span class="nav-icon material-symbols-outlined">report</span>
+                        <span class="navLabel">Инциденти</span>
+                    </a>
+                    <span class="navTooltip">Инциденти</span>
+                </li>
+                <li class = "navItem">
+                    <a href="../pages/team.html" class = "navLink">
+                        <span class="nav-icon material-symbols-outlined">group</span>
+                        <span class="navLabel">Екип</span>
+                    </a>
+                    <span class="navTooltip">Екип</span>
+                </li>
+                  <li class="navItem">
+                    <a href="../pages/map.html" class="navLink">
+                        <span class="nav-icon material-symbols-outlined">public</span>
+                        <span class="navLabel">Карта<span>
+                    </a>
+                    <span class="navTooltip">Карта</span>
+                </li>
+                <li class = "navItem">
+                    <a href="../pages/notification.html" class = "navLink">
+                        <span class="nav-icon material-symbols-outlined">notifications</span>
+                        <span class="navLabel">Известия</span>
+                    </a>
+                    <span class="navTooltip">Известия</span>
+                </li>
+                <li class = "navItem">
+                    <a href="#" class = "navLink">
+                        <span class="nav-icon material-symbols-outlined">analytics</span>
+                        <span class="navLabel">Анализи</span>
+                    </a>
+                    <span class="navTooltip">Анализи</span>
+                </li>
+                <li class = "navItem">
+                    <a href="#" class = "navLink">
+                        <span class="nav-icon material-symbols-outlined">star</span>
+                        <span class="navLabel">Отметки</span>
+                    </a>
+                    <span class="navTooltip">Отметки</span>
+                </li>
+                <li class = "navItem">
+                    <a href="../pages/settings.html" class = "navLink">
+                        <span class="nav-icon material-symbols-outlined">settings</span>
+                        <span class="navLabel">Настройки</span>
+                    </a>
+                    <span class="navTooltip">Настройки</span>
+                </li>
+            </ul>
+
+            <ul class="navList secondaryNav">
+                <li class = "navItem">
+                    <a href="#" class = "navLink">
+                        <span class="nav-icon material-symbols-outlined">account_circle</span>
+                        <span class="navLabel">Акаунт</span>
+                    </a>
+                    <span class="navTooltip">Акаунт</span>
+                </li>
+                <li class = "navItem">
+                    <a href="#" class = "navLink">
+                        <span class="nav-icon material-symbols-outlined">logout</span>
+                        <span class="navLabel">Изход</span>
+                    </a>
+                    <span class="navTooltip">Изход</span>
+            </ul>
+        </nav>
+    </aside> 
         <main class="main-content">
             <section class="settings-section">
                 <h2>Настройки</h2>
