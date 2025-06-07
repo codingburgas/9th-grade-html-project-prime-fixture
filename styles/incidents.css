@@ -19,6 +19,160 @@
     font-size: 2rem;
     min-width: 1500px;
     min-height: 800px;
+    max-height: 800px;
     text-align: center;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+#firstMap{
+     height: 40vh;
+     width: 50vh;
+     margin-left:auto;
+     display:block;
+}
+
+
+.reportIcon{
+    position:absolute;
+    top:25px;
+    left:35px;
+    color: var(--text-clr);
+    font-size:3rem;
+}
+.title{
+    position:absolute;
+    top: 20px;
+    left: 100px;
+    color: var(--text-clr);
+}
+.incidentHeader h3 {
+    margin-top: 10px;
+    font-size: 2rem;
+    text-align: left; 
+}
+.incidentInformation{
+    margin-top: 20px;
+    font-size: 1.7rem;
+    text-align: left; 
+}
+
+.incident {
+    margin-top: 60px;
+    position: relative;
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    color: var(--text-clr);
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    align-items: flex-start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.incident:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.incidentIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff5252;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+}
+
+.fireIcon {
+    font-size: 36px;
+    color: white;
+}
+
+.incidentDetails {
+    flex: 1;
+}
+
+.incidentHeader h3 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    text-align: left;
+    color: #ffcc00;
+}
+
+.incidentInformation {
+    margin-top: 16px;
+    font-size: 1.6rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.incidentInformation .infoIcon {
+    vertical-align: middle;
+    margin-right: 8px;
+    font-size: 20px;
+    color: #ffc107;
+}
+.map{
+    height: 40vh;
+    width: 50vh;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+.incidentScrollArea {
+    flex: 1; 
+    max-height: 100%;
+    overflow-y: auto;
+    margin-top: 70px; 
+    border-radius: 12px;    
+    background-color: #1c1c1c;
+    padding-right: 8px; 
+    height: 600px;
+}
+.incidentScrollArea::-webkit-scrollbar {
+    width: 10px;
+}
+
+.incidentScrollArea::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #555, #777);
+    border-radius: 8px;
+    border: 2px solid #1c1c1c;
+}
+
+.incidentScrollArea::-webkit-scrollbar-track {
+    background: #1c1c1c;
+}
+
+
+.incidentScrollArea {
+    scrollbar-width: thin;
+    scrollbar-color: #777 #1c1c1c;
+}
+
+.sendTeamBtn {
+    position: absolute;
+    bottom: 30px;  
+    left: 40px;    
+    padding: 10px 24px;
+    background-color: #ff5252;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(228, 82, 82, 0.4);
+}
+
+.sendTeamBtn:hover {
+    background-color: #e04848;
 }
