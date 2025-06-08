@@ -68,3 +68,18 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const loginSection = document.getElementById('login');
+    
+    const user = localStorage.getItem('user') || localStorage.getItem('pfUser');
+    if (!user) {
+        
+        loginSection.classList.add('active');
+    } else {
+      
+        loginSection.classList.remove('active');
+    }
+
+  
+});

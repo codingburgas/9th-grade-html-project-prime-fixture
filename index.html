@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="bg">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Prime Fixture</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="styles/sidebar.css">
-    <link rel="stylesheet" href="styles/global.css">
-    <link rel="stylesheet" href="styles/login.css">
-    <link rel="stylesheet" href="styles/popup.css">
-    <link rel="website icon" type="png" href="media/PrimeFixture.png">
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/sidebar.css" />
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/login.css" />
+    <link rel="stylesheet" href="styles/popup.css" />
+    <link rel="website icon" type="png" href="media/PrimeFixture.png" />
+    
+   
 </head>
 <body>
     <aside class="sidebar">
         <header class="sidebarHeader">
             <a href="index.html" class="headerLogo">
-                <img src="media/PrimeFixture.png" alt="primeFixtureLogo">
+                <img src="media/PrimeFixture.png" alt="primeFixtureLogo" />
             </a>
             <button class="toggler sidebarToggler">
                 <span class="material-symbols-outlined">chevron_left</span>
@@ -47,14 +47,14 @@
                     </a>
                     <span class="navTooltip">Екип</span>
                 </li>
-                 <li class="navItem">
+                <li class="navItem">
                     <a href="pages/map.html" class="navLink">
                         <span class="nav-icon material-symbols-outlined">public</span>
-                        <span class="navLabel">Карта<span>
+                        <span class="navLabel">Карта<span></span></span>
                     </a>
                     <span class="navTooltip">Карта</span>
                 </li>
-                
+
                 <li class="navItem">
                     <a href="pages/notification.html" class="navLink">
                         <span class="nav-icon material-symbols-outlined">notifications</span>
@@ -110,18 +110,18 @@
                         <span class="icon">
                             <ion-icon name="mail"></ion-icon>
                         </span>
-                        <input type="email" required id="loginEmail" placeholder=" ">
+                        <input type="email" required id="loginEmail" placeholder=" " />
                         <label for="loginEmail">Имейл</label>
                     </div>
                     <div class="inputBox">
                         <span class="icon">
                             <ion-icon name="lock-closed"></ion-icon>
                         </span>
-                        <input type="password" required id="loginPassword" placeholder=" ">
+                        <input type="password" required id="loginPassword" placeholder=" " />
                         <label for="loginPassword">Парола</label>
                     </div>
                     <div class="rememberForgot">
-                        <label><input type="checkbox">Запомни ме</label>
+                        <label><input type="checkbox" />Запомни ме</label>
                         <a href="#">Забравена парола?</a>
                     </div>
                     <button type="submit">Влизане</button>
@@ -136,7 +136,7 @@
                             <span class="icon">
                                 <ion-icon name="mail"></ion-icon>
                             </span>
-                            <input type="email" required id="forgotEmail" placeholder=" ">
+                            <input type="email" required id="forgotEmail" placeholder=" " />
                             <label for="forgotEmail">Имейл</label>
                         </div>
                         <button type="submit">Изпрати</button>
@@ -151,27 +151,27 @@
                         <span class="icon">
                             <ion-icon name="person"></ion-icon>
                         </span>
-                        <input type="text" required id="regUsername" placeholder=" ">
+                        <input type="text" required id="regUsername" placeholder=" " />
                         <label for="regUsername">Потребителско име</label>
                     </div>
                     <div class="inputBox">
                         <span class="icon">
                             <ion-icon name="mail"></ion-icon>
                         </span>
-                        <input type="email" required id="regEmail" placeholder=" ">
+                        <input type="email" required id="regEmail" placeholder=" " />
                         <label for="regEmail">Имейл</label>
                     </div>
                     <div class="inputBox">
                         <span class="icon">
                             <ion-icon name="lock-closed"></ion-icon>
                         </span>
-                        <input type="password" required id="regPassword" placeholder=" ">
+                        <input type="password" required id="regPassword" placeholder=" " />
                         <label for="regPassword">Парола</label>
                     </div>
                     <div class="roleChoice">
-                        <input type="radio" id="roleUser" name="role" value="user" checked>
+                        <input type="radio" id="roleUser" name="role" value="user" checked />
                         <label for="roleUser">Потребител</label>
-                        <input type="radio" id="roleWorker" name="role" value="worker">
+                        <input type="radio" id="roleWorker" name="role" value="worker" />
                         <label for="roleWorker">Работник</label>
                     </div>
                     <button type="submit">Регистрация</button>
@@ -182,8 +182,25 @@
             </div>
         </section>
     </aside>
+
+    <main class="user-info-container" role="main" aria-label="User Information">
+      <article class="user-card card">
+        <img src="media/default-profile.png" alt="Профилна снимка на потребителя" />
+        <h2 id="userName">Име на потребител</h2>
+        <p id="userEmail">user@example.com</p>
+        <p id="userRole" class="role">Потребител</p>
+      </article>
+
+      <div class="quick-actions-card card" aria-label="Quick actions">
+        <h3>Бързи действия</h3>
+<button type="button" aria-label="Създай нов инцидент" onclick="window.location.href='pages/incidents.html'" >Нов инцидент</button>
+    </div>
+    </main>
+
+   
     <script src="JS/sidebar.js"></script>
     <script src="JS/loginToggle.js"></script>
     <script src="JS/loginDb.js"></script>
+    <script src="JS/dash.js"></script>
 </body>
 </html>
