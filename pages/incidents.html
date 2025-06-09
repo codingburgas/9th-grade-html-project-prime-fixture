@@ -105,7 +105,7 @@
         <span class="reportIcon material-symbols-outlined">report</span>
         <h3 class="title">Последни инциденти</h3>
         <div class="incidentScrollArea">
-        <div class="incident">
+        <div class="incident" id="firstIncident">
     <div class="incidentIcon">
         <span class="material-symbols-outlined fireIcon">local_fire_department</span>
     </div>
@@ -121,7 +121,7 @@
     <button class="sendTeamBtn">Изпрати екип</button>
     <div id="firstMap" class="map"></div>
 </div>
-<div class="incident">
+<div class="incident" id="secondIncident">
     <div class="incidentIcon">
         <span class="material-symbols-outlined fireIcon">local_fire_department</span>
     </div>
@@ -138,6 +138,13 @@
     <div id="secondMap" class="map"></div>
 </div>
     </div>
+        <div class="incidentExpandedView" style="display: none;">
+            <button class="backBtn">⬅ Назад</button>
+        <div class="expandedContent">
+            <p>Welcome! Select an incident to see details.</p>
+        </div>
+</div>
+
     </div>
     </div>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
