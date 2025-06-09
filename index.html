@@ -195,9 +195,27 @@
         <h3>Бързи действия</h3>
 <button type="button" aria-label="Създай нов инцидент" onclick="window.location.href='pages/incidents.html'" >Нов инцидент</button>
     </div>
-    </main>
-
    
+
+   <div class="notifications-preview-card card" aria-label="Последни известия">
+  <h3>Последни известия</h3>
+  <ul class="notifications-list">
+    <li>
+      <span class="material-symbols-outlined notification-icon">notifications</span>
+      <span>Ново системно обновление е налично.</span>
+    </li>
+    <li>
+      <span class="material-symbols-outlined notification-icon">group</span>
+      <span>Иван Иванов качи нова програма в групата.</span>
+    </li>
+    <li>
+      <span class="material-symbols-outlined notification-icon">schedule</span>
+      <span>Напомняне за среща с екипа утре в 10:00 ч.</span>
+    </li>
+  </ul>
+  <button type="button" class="viewAllNotificationsBtn" aria-label="Виж всички известия" onclick="window.location.href='pages/notification.html'">Виж всички</button>
+</div>
+ </main>
     <script src="JS/sidebar.js"></script>
     <script src="JS/loginToggle.js"></script>
     <script src="JS/loginDb.js"></script>
