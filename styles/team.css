@@ -13,12 +13,17 @@ body {
     top: 0;
     z-index: 1000;
 }
+
+.sidebar.collapsed + .teamMain {
+    margin-left: 170px; 
+}
  
 .teamMain {
     margin-left: 260px;
     padding: 0 24px;
     width: calc(100% - 260px);
     box-sizing: border-box;
+    transition: margin-left 0.4s ease;
 }
  
 .teamHeader {

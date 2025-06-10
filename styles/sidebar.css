@@ -142,3 +142,15 @@
     bottom: 30px;
     width: 100%;
 }
+
+/* Disable all animation on the sidebar and everything inside it when the "no-transition" class is added. */
+/*The !important, called "important declaration" makes sure this rule beats any other animation settings, forcing all transitions to turn off completely.*/
+.sidebar.no-transition {
+    transition: none !important;
+}
+
+
+/*The * means "all child elements" inside the sidebar — like buttons, text, icons — so nothing inside will animate either.*/
+.sidebar.no-transition * {
+    transition: none !important;
+}
