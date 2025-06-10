@@ -6,8 +6,8 @@
     margin-left: 270px;
     transition: margin-left 0.4s ease;
 }
-.sidebar.collapsed + .parent {
-    margin-left: 85px; 
+.sidebar.collapsed ~ .parent {
+  margin-left: 85px;
 }
 
 .div1 {

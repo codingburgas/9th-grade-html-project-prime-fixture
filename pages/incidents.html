@@ -54,13 +54,19 @@
                     <span class="navTooltip">Известия</span>
                 </li>
                 <li class = "navItem">
-                  <a href="../pages/chart.html" class="navLink">
+                    <a href="#" class = "navLink">
                         <span class="nav-icon material-symbols-outlined">analytics</span>
                         <span class="navLabel">Анализи</span>
                     </a>
                     <span class="navTooltip">Анализи</span>
                 </li>
-               
+                <li class = "navItem">
+                    <a href="#" class = "navLink">
+                        <span class="nav-icon material-symbols-outlined">star</span>
+                        <span class="navLabel">Отметки</span>
+                    </a>
+                    <span class="navTooltip">Отметки</span>
+                </li>
                 <li class = "navItem">
                     <a href="../pages/settings.html" class = "navLink">
                         <span class="nav-icon material-symbols-outlined">settings</span>
@@ -126,29 +132,78 @@
 </div>
     </div>
     <div class="incidentTeamChoice" style="display: none">
-        <button class="backBtnSecond">⬅ Назад</button>
-        
+    <button class="backBtnSecond">⬅ Назад</button>
+    <h2 class="teamChoiceTitle">Изпращане на екип за инцидент</h2>
+    <div class="incidentTeamWrapper">
+        <div class="teamCard">
+            <div class="teamInfo">
+                <h3>Екип 1: Пожарна бригада</h3>
+                <p><span class="material-symbols-outlined">groups</span> Членове: 5</p>
+                <p><span class="material-symbols-outlined">local_fire_department</span> Специалност: Пожарогасене</p>
+                <p><span class="material-symbols-outlined">check_circle</span> Наличност: Свободен</p>
+            </div>
+            <button class="selectTeamBtn">Изпрати</button>
+        </div>
+        <div class="teamCard">
+            <div class="teamInfo">
+                <h3>Екип 2: Спешна помощ</h3>
+                <p><span class="material-symbols-outlined">groups</span> Членове: 4</p>
+                <p><span class="material-symbols-outlined">medical_services</span> Специалност: Медицинска помощ</p>
+                <p><span class="material-symbols-outlined">check_circle</span> Наличност: Зает</p>
+            </div>
+            <button class="selectTeamBtn" disabled>Зает</button>
+        </div>
+        <div class="teamCard">
+            <div class="teamInfo">
+                <h3>Екип 3: Спасителен отряд</h3>
+                <p><span class="material-symbols-outlined">groups</span> Членове: 6</p>
+                <p><span class="material-symbols-outlined">support_agent</span> Специалност: Спасителни операции</p>
+                <p><span class="material-symbols-outlined">check_circle</span> Наличност: Свободен</p>
+            </div>
+            <button class="selectTeamBtn">Изпрати</button>
+        </div>
     </div>
-        <div class="incidentExpandedView" style="display: none;">
+</div>
+    <div class="incidentExpandedView" style="display: none;">
     <button class="backBtn">⬅ Назад</button>
-    <div class="incidentDetailsFirst">
-        <h2>Инцидент 1 - Детайли</h2>
-        <p>Час на подаване: 14:35</p>
-        <p>Адрес: ул. Св. Кирил и Методий №24 8000 Бургас</p>
-        <p>Тип инцидент: Пожар</p>
-        <p>Статус: Очаква изпращане</p>
+    <div class="incidentDetailsFirst" id="incidentExpandedInformation">
+    <h2>Инцидент 1 - Детайли</h2>
+    <div class="incidentDetailsWrapper">
+        <div class="incidentDetails">
+            <p><span class="material-symbols-outlined infoIcon">schedule</span> Час на подаване: 14:35</p>
+            <p><span class="material-symbols-outlined infoIcon">location_on</span> Адрес: ул. Св. Кирил и Методий №24 8000 Бургас</p>
+            <p><span class="material-symbols-outlined infoIcon">warning</span> Тип инцидент: Пожар</p>
+            <p><span class="material-symbols-outlined infoIcon">priority_high</span> Статус: Очаква изпращане</p>
+            <p><span class="material-symbols-outlined infoIcon">person</span> Подател: Иван Петров</p>
+            <p><span class="material-symbols-outlined infoIcon">call</span> Телефон: +0888128426</p>
+            <p><span class="material-symbols-outlined infoIcon">description</span> Описание: Гори апартамент на третия етаж, има задимняване</p>
+            <button class="expandedSendTeamBtn">Изпрати екип</button>
+        </div>
+        <div id="firstExpandedMap" class="map"></div>
     </div>
-    <div class="incidentDetailsSecond">
+</div>
+    <div class="incidentDetailsSecond" id="incidentExpandedInformation">
         <h2>Инцидент 2 - Детайли</h2>
-        <p>Час на подаване: 12:35</p>
-        <p>Адрес: ул. Сливница №11-13 8000 Бургас</p>
-        <p>Тип инцидент: Пожар</p>
-        <p>Статус: Непотвърден</p>
+    <div class="incidentDetailsWrapper">
+        <div class="incidentDetails">
+            <p><span class="material-symbols-outlined infoIcon">schedule</span> Час на подаване: 12:35</p>
+            <p><span class="material-symbols-outlined infoIcon">location_on</span> Адрес:  ул. Сливница №11-13 8000 Бургас</p>
+            <p><span class="material-symbols-outlined infoIcon">warning</span> Тип инцидент: Пожар</p>
+            <p><span class="material-symbols-outlined infoIcon">priority_high</span> Статус: Непотвърден</p>
+            <p><span class="material-symbols-outlined infoIcon">person</span> Подател: Мария Георгиева</p>
+            <p><span class="material-symbols-outlined infoIcon">call</span> Телефон: +0881193236</p>
+            <p><span class="material-symbols-outlined infoIcon">description</span> Описание: Гъст дим от втория етаж, възможно наличие на хора вътре.</p>
+            <button class="expandedSendTeamBtn">Изпрати екип</button>
+        </div>
+        <div id="secondExpandedMap" class="map"></div>
+    </div>
     </div>
 </div>
 </div>
-
-    </div>
+    <div id="customAlert" class="custom-alert">
+  <span class="material-symbols-outlined" style="vertical-align: middle; margin-right: 8px;">Check</span>
+  Изпратено уведомление до екип
+</div>
     </div>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="../JS/sidebar.js"></script>
