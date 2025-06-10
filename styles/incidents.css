@@ -47,11 +47,6 @@
     left: 100px;
     color: var(--text-clr);
 }
-.incidentHeader h3 {
-    margin-top: 10px;
-    font-size: 2rem;
-    text-align: left; 
-}
 .incidentInformation{
     margin-top: 20px;
     font-size: 1.7rem;
@@ -93,10 +88,6 @@
 .fireIcon {
     font-size: 36px;
     color: white;
-}
-
-.incidentDetails {
-    flex: 1;
 }
 
 .incidentHeader h3 {
@@ -203,6 +194,21 @@
     margin-bottom: 24px;
 }
 
+.incidentTeamChoice .backBtnSecond
+{
+    background-color: #2a2a2a;
+    color: #ffcc00;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    margin-bottom: 24px;
+}
+
 .incidentExpandedView .backBtn:hover {
     background-color: #3a3a3a;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
@@ -242,4 +248,17 @@
 
 .fade-slide-out {
     animation: fadeSlideOut 0.3s ease forwards;
+}
+
+.incidentTeamChoice{
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 2rem;
+    color: white;
+    overflow-y: auto;
+    border-radius: 12px;
+    animation: fadeIn 0.3s ease;
 }

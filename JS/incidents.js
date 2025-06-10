@@ -28,48 +28,45 @@ L.circleMarker([42.4958, 27.4690], {
 
 
 
-const incidentDetails = {
-  firstIncident: `
-    <h2>Инцидент 1 - Детайли</h2>
-    <p>Час на подаване: 14:35</p>
-    <p>Адрес: ул. Св. Кирил и Методий №24 8000 Бургас</p>
-    <p>Тип инцидент: Пожар</p>
-    <p>Статус: Очаква изпращане</p>
-    <p>Тук може да добавите още информация, снимки и връзки.</p>
-  `,
-  secondIncident: `
-    <h2>Инцидент 2 - Детайли</h2>
-    <p>Час на подаване: 12:35</p>
-    <p>Адрес: ул. Сливница №11-13 8000 Бургас</p>
-    <p>Тип инцидент: Пожар</p>
-    <p>Статус: Непотвърден</p>
-    <p>Тук може да добавите още информация, снимки и връзки.</p>
-  `
-};
-
+document.addEventListener('DOMContentLoaded', () => {
+const incidentDetailsMap = {
+  firstIncident: document.getElementsByClassName('incidentDetailsFirst').innerHTML,
+  secondIncident: document.getElementsByClassName('incidentDetailsSecond').innerHTML
+}
+});
 
 const incidents = document.querySelectorAll('.incident');
 const scrollArea = document.querySelector('.incidentScrollArea');
 const expandedView = document.querySelector('.incidentExpandedView');
 const backBtn = document.querySelector('.backBtn');
-const expandedContent = expandedView.querySelector('.expandedContent');
-
+const expandedContent = expandedView.querySelector('.incidentDetailsFirst');
+const incidentDetailsFirst = expandedView.querySelector('.incidentDetailsFirst');
+const incidentDetailsSecond = expandedView.querySelector('.incidentDetailsSecond');
 
 incidents.forEach(incident => {
   incident.addEventListener('click', () => {
+
     scrollArea.classList.remove('fade-slide-in');
     scrollArea.classList.add('fade-slide-out');
 
     setTimeout(() => {
+
       scrollArea.style.display = 'none';
+
 
       expandedView.style.display = 'block';
       expandedView.classList.remove('fade-slide-out');
       expandedView.classList.add('fade-slide-in');
 
       const incidentId = incident.getAttribute('id');
-      const details = incidentDetails[incidentId];
-      expandedContent.innerHTML = details;
+
+      if (incidentId === 'firstIncident') {
+          incidentDetailsFirst.style.display = 'block';
+          incidentDetailsSecond.style.display = 'none';
+} else if (incidentId === 'secondIncident') {
+          incidentDetailsFirst.style.display = 'none';
+          incidentDetailsSecond.style.display = 'block';
+}
     }, 300);
   });
 });
@@ -84,7 +81,46 @@ backBtn.addEventListener('click', () => {
 
   setTimeout(() => {
     expandedView.style.display = 'none';
+
     expandedView.classList.remove('fade-slide-out');
     scrollArea.classList.remove('fade-slide-in');
   }, 300);
+});
+
+const sendTeamButtons = document.querySelectorAll('.sendTeamBtn');
+const backBtnSecond = document.querySelector('.backBtnSecond');
+const teamChoicePanel = document.querySelector('.incidentTeamChoice');
+
+sendTeamButtons.forEach(button => {
+  button.addEventListener('click', (e) => {
+    e.stopPropagation();
+    
+    
+    scrollArea.classList.remove('fade-slide-in');
+    scrollArea.classList.add('fade-slide-out');
+    
+    setTimeout(() => {
+      scrollArea.style.display = 'none';
+      
+      
+      teamChoicePanel.style.display = 'block';
+      teamChoicePanel.classList.remove('fade-slide-out');
+      teamChoicePanel.classList.add('fade-slide-in');
+    }, 300); 
+  });
+});
+
+
+backBtnSecond.addEventListener('click', () => {
+
+  teamChoicePanel.classList.remove('fade-slide-in');
+  teamChoicePanel.classList.add('fade-slide-out');
+  
+  
+    teamChoicePanel.style.display = 'none';
+    
+
+    scrollArea.style.display = 'block';
+    scrollArea.classList.remove('fade-slide-out');
+    scrollArea.classList.add('fade-slide-in');
 });
