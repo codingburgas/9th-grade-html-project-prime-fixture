@@ -1,15 +1,17 @@
 <h1 align="center"> Prime Fixture </h1>
 <p align="center">
-  <img src="PrimeFixture.png" alt="Prime Fixture Logo" width="45%">
+  <img src="/media/PrimeFixture.png" alt="Prime Fixture Logo" width="45%">
 </p>
 
 ---
 
 <p align="center">
-  <img src="" alt="Languages">
-  <img src="" alt="Last Commit">
-  <img src="" alt="Closed Issues">
-  <img alt="">
+  <img src="https://img.shields.io/github/languages/top/codingburgas/9th-grade-html-project-prime-fixture" alt="Languages">
+  <img src="https://img.shields.io/github/last-commit/codingburgas/9th-grade-html-project-prime-fixture" alt="Last Commit">
+  <img src="https://img.shields.io/github/issues-closed/codingburgas/9th-grade-html-project-prime-fixture" alt="Closed Issues">
+  <img src="https://img.shields.io/github/repo-size/codingburgas/9th-grade-html-project-prime-fixture" alt="Repo size">
+  <img src="https://img.shields.io/github/issues/codingburgas/9th-grade-html-project-prime-fixture" alt="Repo size">
+  <img src="https://img.shields.io/badge/Built%20with-%E2%9D%A4-red" alt="Repo size">
 </p>
 
 ---
@@ -58,44 +60,35 @@ The documents contain information on planning, logic diagrams, workflows, UI exp
 
 ---
 
-## 🚀 Installation and Setup <a name="install"></a>
-
-This project is ready to run out-of-the-box using QT. Just follow these steps:
-
-1️⃣ **Clone the project**
-git clone EXAMPLE_LINK
-
----
-
 ## 💻Tech Stack <a name="technologies"></a>
 
 ###  Tools:
 <p>
-  <img src="media/READMEPics/VSC4.png" alt="VS Code Icon" width=75px>
-  <img src="media/READMEPics/github.png" alt="GitHub Icon" width=75px>
+  <img src="media/readme/visualStudioCode.png" alt="VS Code Icon" width=65>
+  <img src="media/readme/github.png" alt="GitHub Icon" width=75px>
 </p>
 
 ### Languages:
 <p>
-       
-  <img src="media/READMEPics/JS.png" alt="JS icon" width=75px>
-  <img src="media/READMEPics/HTML5.png" alt="HTML icon" width=75px>
+  <img src="media/readme/css.png" alt="JS icon" width=75px>
+  <img src="media/readme/js.png" alt="JS icon" width=80px height=73px>
+  <img src="media/readme/HTML5.png" alt="HTML icon" width=75px>
 </p>
 
 ### Comunication: 
-<img src="media/READMEPics/teams.png" alt="Teams Icon" width=75px>
+<img src="media/readme/teams.png" alt="Teams Icon" width=75px>
 
 ### Documentation: 
 <p>
-  <img src="media/READMEPics/Word.png" alt="Word Icon" width=75px>
-  <img src="media/READMEPics/Powerpoint.png" alt="Powerpoint Icon" width=75px>
+  <img src="media/readme/Word.png" alt="Word Icon" width=75px>
+  <img src="media/readme/Powerpoint.png" alt="Powerpoint Icon" width=75px>
 </p>
 
 ### Design: 
 
 <p>
-  <img src="media/READMEPics/Photoshop.png" alt="Photoshop Icon" width=75px>
-  <img src="media/READMEPics/figma.png" alt="Figma Icon" width=75px>
+  <img src="media/readme/Photoshop.png" alt="Photoshop Icon" width=75px>
+  <img src="media/readme/figma.png" alt="Figma Icon" width=75px>
 </p>
 
 ---
@@ -103,9 +96,9 @@ git clone EXAMPLE_LINK
 
 | Name | Role | Grade |
 | :---:   | :---: | :---: |
-|  <h3><a href = "https://github.com/LANiliev23">Lyubomir Iliev</a></h3> | Scrum Trainer | 9B |
-| <h3><a href = "https://github.com/GZPavlov23"> Georgi Pavlov </a></h3>| Backend Developer | 9G |
-| <h3><a href = "https://github.com/KaloyanBoychev"> Kaloyan Boychev</a></h3> |  Backend Developer  | 9V |
+|  <h3><a href = "https://github.com/GZPavlov23"> Georgi Pavlov</a></h3> | Scrum Trainer | 9G |
+| <h3><a href = "https://github.com/LANiliev23">Lyubomir Iliev </a></h3>| FrontEnd Developer | 9V |
+| <h3><a href = "https://github.com/KaloyanBoychev"> Kaloyan Boychev</a></h3> |  BackEnd Developer  | 9B |
 | <h3><a href = "https://github.com/VANikov23"> Viktor Nikov</a></h3> | Designer | 9A |
 
 ---
