@@ -53,9 +53,9 @@ With a streamlined interface and a modular architecture, Prime Fixture enables i
 
 ## 📃 Documentation and Presentation <a name="docs"></a>
 
-- 📜 [Documentation]()  
-- 🎤 [Presentation]()
-- ✅ [QA]()
+- 📜 [Documentation](https://minedusci-my.sharepoint.com/:w:/g/personal/kb23158593_edu_mon_bg/EdtnCaYgnxVFnWxBa-as8k0BX0X3Tru2yCIpL5Bz7-9Kcg?e=9afUcQ)  
+- 🎤 [Presentation](https://minedusci-my.sharepoint.com/:p:/g/personal/kb23158593_edu_mon_bg/Ea9NEWOsCKxEl_oH8GCChK0BBl-wb0uU4yVhlDeExvgYbw?e=sWHQck)
+- ✅ [QA](https://minedusci-my.sharepoint.com/:x:/g/personal/kb23158593_edu_mon_bg/EeqxGM6ZO5pIowt0ot5eCwwBUs6a-f7fFdWFEum7zTOpAQ?e=QOxLYx)
 
 The documents contain information on planning, logic diagrams, workflows, UI explanations, and all supporting visuals used during development.
 
