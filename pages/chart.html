@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="bg">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Анализи | Prime Fixture</title>
@@ -85,14 +85,29 @@
                 </li>
             </ul>
         </nav>
-    </aside> 
-    <main> 
-        <div class="chart-container">
-            <h1>Number of Fires in Bulgaria (2020-2024)</h1>
-            <canvas id="firesChart"></canvas> 
-            </p>
-        </div>
-    </main>
+    </aside>
+        <div class="parent">
+        <div class="div1">
+        <span class="chartIcon material-symbols-outlined">analytics</span>
+        <h3 class="title">Последни инциденти</h3>
+        <div class="chartScrollArea">
+        <div class="chartsGrid">
+  <div class="chartSmall">
+    <h1>Брой пожари по квартали</h1>
+    <canvas id="firesChart"></canvas>
+  </div>
+  <div class="chartSmall">
+    <h1>Средно време за реакция</h1>
+    <canvas id="responseTimeChart"></canvas>
+  </div>
+  <div class="chartWide">
+    <h1>Видове инциденти в Бургас</h1>
+    <canvas id="incidentTypesChart"></canvas>
+  </div>
+</div>
+</div>
+</div>
+</div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script src="../JS/chart.js"></script>
     <script src="../JS/sidebar.js"></script>
