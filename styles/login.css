@@ -25,10 +25,10 @@ section {
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: 1000;
+    z-index: 10000; 
     justify-content: center;
     align-items: center;
-    background: rgba(0,0,0,0.6);
+    background: rgba(20,20,20,0.55); 
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.4s;
@@ -38,9 +38,9 @@ section {
     pointer-events: auto;
 }
 .loginBox {
-    width: 650px;
+    width: 380px;
     max-width: 98vw;
-    min-height: 600px;
+    min-height: 0;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -51,12 +51,13 @@ section {
     align-items: center;
     box-shadow: 0 12px 40px 0 rgba(255,45,45,0.25);
     backdrop-filter: blur(10px);
-    padding: 48px 40px 36px 40px;
+    padding: 32px 24px 24px 24px;
     margin: 0;
     font-size: 1.1em;
     transform: translateY(-40px) scale(0.98);
     opacity: 0;
     transition: transform 0.5s cubic-bezier(.4,1.4,.6,1), opacity 0.4s;
+    z-index: 10001; 
 }
 #login.active .loginBox {
     transform: translateY(0) scale(1);
@@ -200,6 +201,9 @@ button[type="submit"]:hover {
 .registerLink p a:hover {
     text-decoration: underline;
 }
+
+/* Махни roleChoice ако не се ползва в HTML */
+/*
 .roleChoice {
     display: flex;
     justify-content: center;
@@ -207,11 +211,9 @@ button[type="submit"]:hover {
     margin: 10px 0 0 0;
     width: 100%;
 }
-
 .roleChoice input[type="radio"] {
     display: none;
 }
-
 .roleChoice label {
     padding: 8px 24px;
     border-radius: 20px;
@@ -224,13 +226,13 @@ button[type="submit"]:hover {
     font-size: 1em;
     box-shadow: 0 1px 4px 0 rgba(255,45,45,0.08);
 }
-
 .roleChoice input[type="radio"]:checked + label {
     background: #ff2d2d;
     color: #fff;
     border-color: #ff2d2d;
     box-shadow: 0 2px 8px 0 rgba(255,45,45,0.18);
 }
+*/
 
 .registerForgotLinks {
     display: flex;

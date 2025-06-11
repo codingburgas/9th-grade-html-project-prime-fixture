@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,85 +8,83 @@
     <link rel="stylesheet" href="../styles/sidebar.css">
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/settings.css">
+    <link rel="stylesheet" href="../styles/popup.css">
     <link rel="website icon" type="png" href="../media/PrimeFixture.png">
 </head>
 <body>
     <div class="layout">
-    <aside class="sidebar">
-        <header class="sidebarHeader">
-            <a href="../index.html" class="headerLogo">
-                <img src="../media/PrimeFixture.png" alt="primeFixtureLogo">
-            </a>
-            <button class="toggler sidebarToggler">
-                <!--Use a different case for the class because of the linking-->
-            <span class="material-symbols-outlined">chevron_left</span>
-            </button>
-        </header>
-
-        <nav class = "sidebarNav">
-            <ul class="navList primaryNav">
-                <li class = "navItem">
-                    <a href="../pages/incidents.html" class = "navLink">
-                        <span class="nav-icon material-symbols-outlined">report</span>
-                        <span class="navLabel">Инциденти</span>
-                    </a>
-                    <span class="navTooltip">Инциденти</span>
-                </li>
-                <li class = "navItem">
-                    <a href="../pages/team.html" class = "navLink">
-                        <span class="nav-icon material-symbols-outlined">group</span>
-                        <span class="navLabel">Екип</span>
-                    </a>
-                    <span class="navTooltip">Екип</span>
-                </li>
-                  <li class="navItem">
-                    <a href="../pages/map.html" class="navLink">
-                        <span class="nav-icon material-symbols-outlined">public</span>
-                        <span class="navLabel">Карта<span>
-                    </a>
-                    <span class="navTooltip">Карта</span>
-                </li>
-                <li class = "navItem">
-                    <a href="../pages/notification.html" class = "navLink">
-                        <span class="nav-icon material-symbols-outlined">notifications</span>
-                        <span class="navLabel">Известия</span>
-                    </a>
-                    <span class="navTooltip">Известия</span>
-                </li>
-                <li class = "navItem">
-                <a href="../pages/chart.html" class="navLink">
-                        <span class="nav-icon material-symbols-outlined">analytics</span>
-                        <span class="navLabel">Анализи</span>
-                    </a>
-                    <span class="navTooltip">Анализи</span>
-                </li>
-               
-                <li class = "navItem">
-                    <a href="../pages/settings.html" class = "navLink">
-                        <span class="nav-icon material-symbols-outlined">settings</span>
-                        <span class="navLabel">Настройки</span>
-                    </a>
-                    <span class="navTooltip">Настройки</span>
-                </li>
-            </ul>
-
-            <ul class="navList secondaryNav">
-                <li class = "navItem">
-                    <a href="#" class = "navLink">
-                        <span class="nav-icon material-symbols-outlined">account_circle</span>
-                        <span class="navLabel">Акаунт</span>
-                    </a>
-                    <span class="navTooltip">Акаунт</span>
-                </li>
-                <li class = "navItem">
-                    <a href="#" class = "navLink">
-                        <span class="nav-icon material-symbols-outlined">logout</span>
-                        <span class="navLabel">Изход</span>
-                    </a>
-                    <span class="navTooltip">Изход</span>
-            </ul>
-        </nav>
-    </aside> 
+        <aside class="sidebar">
+            <header class="sidebarHeader">
+                <a href="../index.html" class="headerLogo">
+                    <img src="../media/PrimeFixture.png" alt="primeFixtureLogo">
+                </a>
+                <button class="toggler sidebarToggler">
+                    <span class="material-symbols-outlined">chevron_left</span>
+                </button>
+            </header>
+            <nav class="sidebarNav">
+                <ul class="navList primaryNav">
+                    <li class="navItem">
+                        <a href="../pages/incidents.html" class="navLink">
+                            <span class="nav-icon material-symbols-outlined">report</span>
+                            <span class="navLabel">Инциденти</span>
+                        </a>
+                        <span class="navTooltip">Инциденти</span>
+                    </li>
+                    <li class="navItem">
+                        <a href="../pages/team.html" class="navLink">
+                            <span class="nav-icon material-symbols-outlined">group</span>
+                            <span class="navLabel">Екип</span>
+                        </a>
+                        <span class="navTooltip">Екип</span>
+                    </li>
+                    <li class="navItem">
+                        <a href="../pages/map.html" class="navLink">
+                            <span class="nav-icon material-symbols-outlined">public</span>
+                            <span class="navLabel">Карта</span>
+                        </a>
+                        <span class="navTooltip">Карта</span>
+                    </li>
+                    <li class="navItem">
+                        <a href="../pages/notification.html" class="navLink">
+                            <span class="nav-icon material-symbols-outlined">notifications</span>
+                            <span class="navLabel">Известия</span>
+                        </a>
+                        <span class="navTooltip">Известия</span>
+                    </li>
+                    <li class="navItem">
+                        <a href="../pages/chart.html" class="navLink">
+                            <span class="nav-icon material-symbols-outlined">analytics</span>
+                            <span class="navLabel">Анализи</span>
+                        </a>
+                        <span class="navTooltip">Анализи</span>
+                    </li>
+                    <li class="navItem">
+                        <a href="../pages/settings.html" class="navLink">
+                            <span class="nav-icon material-symbols-outlined">settings</span>
+                            <span class="navLabel">Настройки</span>
+                        </a>
+                        <span class="navTooltip">Настройки</span>
+                    </li>
+                </ul>
+                <ul class="navList secondaryNav">
+                    <li class="navItem">
+                        <a href="#" class="navLink">
+                            <span class="nav-icon material-symbols-outlined">account_circle</span>
+                            <span class="navLabel">Акаунт</span>
+                        </a>
+                        <span class="navTooltip">Акаунт</span>
+                    </li>
+                    <li class="navItem">
+                        <a href="#" class="navLink logoutBtn">
+                            <span class="nav-icon material-symbols-outlined">logout</span>
+                            <span class="navLabel">Изход</span>
+                        </a>
+                        <span class="navTooltip">Изход</span>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
         <main class="main-content">
             <section class="settings-section">
                 <h2>Настройки</h2>
@@ -115,7 +113,7 @@
                         Телефон (незадължително):
                         <input type="tel" id="profilePhone" placeholder="08xxxxxxxx">
                     </label>
-                    <button type="submit">Запази промените</button>
+                    <button type="submit" class="mainBtn">Запази промените</button>
                 </form>
                 <div class="notification-settings">
                     <h3>Известия</h3>
@@ -158,6 +156,6 @@
     </div>
     <script src="../JS/sidebar.js"></script>
     <script src="../JS/settings.js"></script>
-    
+    <script src="../JS/loginDb.js"></script>
 </body>
 </html>
