@@ -55,6 +55,7 @@ With a streamlined interface and a modular architecture, Prime Fixture enables i
 
 - 📜 [Documentation]()  
 - 🎤 [Presentation]()
+- ✅ [QA]()
 
 The documents contain information on planning, logic diagrams, workflows, UI explanations, and all supporting visuals used during development.
 
@@ -81,7 +82,8 @@ The documents contain information on planning, logic diagrams, workflows, UI exp
 ### Documentation: 
 <p>
   <img src="media/readme/Word.png" alt="Word Icon" width=75px>
-  <img src="media/readme/Powerpoint.png" alt="Powerpoint Icon" width=75px>
+<img src="media/readme/Powerpoint.png"alt="PowerpointIcon"width=75px>
+  <img src="media/readme/excel.png" alt="Excel Icon" width=75px>
 </p>
 
 ### Design: 
