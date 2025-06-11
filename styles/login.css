@@ -202,38 +202,16 @@ button[type="submit"]:hover {
     text-decoration: underline;
 }
 
-/* Махни roleChoice ако не се ползва в HTML */
-/*
-.roleChoice {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    margin: 10px 0 0 0;
-    width: 100%;
+/* Popup alert винаги най-отгоре */
+.pfPopupBg {
+    z-index: 20000 !important;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
 }
-.roleChoice input[type="radio"] {
-    display: none;
-}
-.roleChoice label {
-    padding: 8px 24px;
-    border-radius: 20px;
-    background: #2a1818;
-    color: #ff2d2d;
-    font-weight: 600;
-    cursor: pointer;
-    border: 2px solid #ff2d2d;
-    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-    font-size: 1em;
-    box-shadow: 0 1px 4px 0 rgba(255,45,45,0.08);
-}
-.roleChoice input[type="radio"]:checked + label {
-    background: #ff2d2d;
-    color: #fff;
-    border-color: #ff2d2d;
-    box-shadow: 0 2px 8px 0 rgba(255,45,45,0.18);
-}
-*/
 
+/* Махнато: .roleChoice (Потребител/Работник) */
+
+/* Останалите стилове за login/register форми */
 .registerForgotLinks {
     display: flex;
     justify-content: center;
