@@ -6,13 +6,46 @@
     font-family: "Oswald", sans-serif;
 }
 :root {
+    --sitebackground: radial-gradient(circle at center, #5a1a1a, #1a0a0a);
     --background-clr: #1E1E1E;
     --text-clr: #fff;
     --secondarytext-clr: #1E1E1E;
     --secondarybackground-clr: #fff;
-    --tertiarybackground-clr: #2e2b2b;
+    --toglerbackground-clr:#fff;
+    --tertiarybackground-clr: #2a2a2a;
+    --text-hover:#3a3a3a; 
+    --secondText-hover: #C0C0C0;
+    --datareadbackground: #3d3b3b;
+    --notificationtimeandaction: #999;
+    --notificationbody: #ccc;
+    --deleteicon: #aaa;
+    --scrollbarthumb: linear-gradient(180deg, #555, #777);
+    --scrollbarsecond-clr: #777;
+    --scrollbarborder: #1c1c1c;
+    --teamstatusBtn: #23232e;
+}
+
+body.whiteTheme{
+    --sitebackground: radial-gradient(circle at center, #ffe5e5, #f0d6d6, #e0b4b4);
+    --background-clr: #ffffff; 
+    --text-clr: #000000; 
+    --secondarytext-clr: #555555; 
+    --secondarybackground-clr: #f0f0f0;
+    --toglerbackground-clr:#555555;
+    --tertiarybackground-clr: #e0e0e0; 
+    --text-hover: #d0d0d0;
+    --secondText-hover: #A9A9A9;
+    --datareadbackground: #f5f5f5;
+    --notificationtimeandaction: #666666;
+    --notificationbody: #999999; 
+    --deleteicon: #888888;
+    --scrollbarthumb: linear-gradient(180deg, #bbb, #ddd);
+    --scrollbarsecond-clr: #ddd;
+    --scrollbarborder: #f0f0f0;
+    --teamstatusBtn: #e3e3e8;
+    --dashboardbackground-clr: linear-gradient(120deg, #ffebe9 60%, #f7d7d6 100%)
 }
 body {
     min-height: 100vh;
-    background: radial-gradient(circle at center, #5a1a1a, #1a0a0a);
+    background: var(--sitebackground);
 }

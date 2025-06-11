@@ -4,7 +4,7 @@
     position: fixed;
     margin: 16px;
     border-radius: 16px;
-    background-color: #1E1E1E;
+    background-color: var(--background-clr);
     height: calc(100vh - 32px);
     transition: 0.4s ease;
 }
@@ -28,13 +28,13 @@
     height: 35px;
     width: 35px;
     border: none;
-    color:#1E1E1E;
+    color: var(--background-clr);
     display:flex;
     align-items:center;
     justify-content: center;
     cursor: pointer;
     border-radius: 8px;
-    background: #fff;
+    background: var(--toglerbackground-clr);
     transition: 0.4s ease;
 }
 
@@ -43,7 +43,7 @@
 }
 
 .sidebarHeader .toggler:hover{
-    background: #C0C0C0;
+    background: var(--secondText-hover);
 }
 
 .sidebarHeader .toggler span {
@@ -81,7 +81,7 @@
 }
 
 .sidebarNav .navLink{
-    color: #fff;
+    color: var(--text-clr);
     display: flex;
     gap: 12px;
     white-space: nowrap;
@@ -93,8 +93,8 @@
 }
 
 .sidebarNav .navLink:hover{
-    color:#1E1E1E;
-    background: #fff;
+    color:var(--secondarytext-clr);
+    background: var(--secondarybackground-clr);
 }
 
 .sidebarNav .navLink .navLabel {
@@ -120,7 +120,7 @@
     color:#1E1E1E;
     padding: 6px 12px;
     border-radius: 8px;
-    background: #fff;
+    background: var(--secondarytext-clr);
     white-space: nowrap;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     transition: 0.0s;

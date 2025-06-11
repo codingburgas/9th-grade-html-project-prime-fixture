@@ -15,11 +15,11 @@
 .settings-section {
     width: 100%;
     max-width: 900px;
-    background: rgba(30, 18, 25, 0.98);
+    background: var(--scrollbarborder);
     border-radius: 18px;
     box-shadow: 0 4px 24px 0 rgba(45, 29, 29, 0.13);
     padding: 36px 32px 28px 32px;
-    color: #fff;
+    color: var(--text-clr);
     font-size: 1.08em;
     margin-top: 32px;
     animation: fadeIn 0.8s;
@@ -34,7 +34,7 @@
 .settings-section h2 {
     text-align: center;
     margin-bottom: 24px;
-    color: #fff;
+    color: var(--text-clr);
     letter-spacing: 1px;
     text-shadow: 0 2px 8px #2d1b1b;
     font-size: 2em;
@@ -71,11 +71,11 @@
     margin: 0 auto 10px auto;
     box-shadow: 0 2px 12px 0 rgba(45,29,29,0.15);
     transition: box-shadow 0.3s, border-color 0.3s;
-    background: #1a1010;
+    background: var(--teamstatusBtn);
 }
 #profileImagePreview:hover {
     box-shadow: 0 4px 24px 0 rgb(255, 82, 82);
-    border-color: #fff;
+    border-color: var(--text-clr);
 }
 
 .profile-settings label,
@@ -85,7 +85,7 @@
     margin-bottom: 14px;
     font-weight: 500;
     transition: color 0.2s;
-    color: #fff;
+    color: var(--text-clr);
 }
 
 .settings-section input[type="text"],
@@ -97,8 +97,8 @@
     margin-top: 4px;
     border-radius: 8px;
     border: 1.5px solid #2d1b1b;
-    background: #23181a;
-    color: #fff;
+    background: var(--teamstatusBtn);
+    color: var(--text-clr);
     font-size: 1em;
     outline: none;
     transition: border-color 0.2s, box-shadow 0.2s;
@@ -115,14 +115,14 @@
 
 .settings-section input[type="file"] {
     margin-top: 8px;
-    color: #fff;
+    color: var(--text-clr);
 }
 
 .settings-section button,
 .saveSettingsBtn {
     padding: 7px 16px;
     background-color: #ff5252;
-    color: white;
+    color: var(--text-clr);
     border: none;
     border-radius: 10px;
     font-size: 1.1rem;
@@ -151,10 +151,6 @@
     accent-color: #e45252;
 }
 
-::-webkit-input-placeholder { color: #bbb; }
-::-moz-placeholder { color: #bbb; }
-:-ms-input-placeholder { color: #bbb; }
-::placeholder { color: #bbb; }
 
 @media (max-width: 700px) {
     .settings-section {

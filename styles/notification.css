@@ -47,7 +47,7 @@
     left:260px;
     background-color: #9b0a0a;
     border-radius: 50%;
-    color: #fff;
+    color: var(--text-clr);
     display: flex;                    
     align-items: center;             
     justify-content: center;         
@@ -67,7 +67,7 @@
     padding: 0 12px;
     gap: 8px;
     border-radius: 12px;
-    background-color: #2a2a2a;
+    background-color: var(--tertiarybackground-clr);
     color: var(--text-clr);
     cursor: pointer;
     transition: 0.2s ease,  0.2s ease;
@@ -75,7 +75,7 @@
 }
 
 .filterButton:hover {
-    background-color: #3a3a3a;; 
+    background-color: var(--text-hover); 
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
@@ -102,7 +102,7 @@
     padding: 0 12px;
     gap: 8px;
     border-radius: 12px;
-    background-color: #2a2a2a;
+    background-color: var(--tertiarybackground-clr);
     color: var(--text-clr);
     cursor: pointer;
     transition: 0.2s ease,  0.2s ease;
@@ -110,7 +110,7 @@
 }
 
 .readallButton:hover {
-    background-color: #3a3a3a;; 
+    background-color: var(--text-hover); 
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
@@ -131,7 +131,7 @@
 }
 
 .notificationCard {
-    background-color: #2a2a2a;
+    background-color: var(--tertiarybackground-clr);
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
@@ -146,7 +146,7 @@
 }
 
 .notificationCard[data-read="true"] {
-    background-color: #3d3b3b; 
+    background-color: var(--datareadbackground); 
     opacity: 0.7;
 }
 
@@ -182,14 +182,14 @@
     align-items: center;
     gap: 12px;
     font-size: 14px; 
-    color: #999;
+    color: var(--notificationtimeandaction);
 }
 
 .notificationBody {
     text-align: left;
     font-size: 16px; 
     line-height: 22px; 
-    color: #ccc;
+    color: var(--notificationbody);
 }
 
 .deleteIcon {
@@ -197,13 +197,13 @@
     right: 20px;
     bottom: 20px;
     font-size: 19px; 
-    color: #aaa;
+    color: var(--deleteicon);
     cursor: pointer;
     transition: color 0.2s ease;
 }
 
 .deleteIcon:hover {
-    color: #fff;
+    color: var(--text-clr);
 }
 
 .checkIcon{
@@ -212,14 +212,14 @@
 }
 
 .checkIcon:hover{
-    color: #fff;
+    color: var(--text-clr);
 }
 
 .filterPopup {
     position: absolute;
     top: 90px;
     right: 260px;
-    background-color: #1e1e1e;
+    background-color: var(--background-clr);
     color: var(--text-clr);
     padding: 1rem;
     border-radius: 12px;
@@ -241,7 +241,6 @@
     overflow-y: auto;
     margin-top: 70px; 
     border-radius: 12px;
-    background-color: #1c1c1c;
     padding-right: 8px; 
 }
 .notificationScrollArea::-webkit-scrollbar {
@@ -249,17 +248,17 @@
 }
 
 .notificationScrollArea::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #555, #777);
+    background: var(--scrollbarthumb);
     border-radius: 8px;
-    border: 2px solid #1c1c1c;
+    border: 2px solid var(--scrollbarborder);
 }
 
 .notificationScrollArea::-webkit-scrollbar-track {
-    background: #1c1c1c;
+    background: var(--scrollbarborder);
 }
 
 
 .notificationScrollArea {
     scrollbar-width: thin;
-    scrollbar-color: #777 #1c1c1c;
+    scrollbar-color: var(--scrollbarsecond-clr) var(--scrollbarborder);
 }

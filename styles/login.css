@@ -5,7 +5,6 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(270deg, #ff2d2d, #ff9900, #ffe600, #ff2d2d);
   background-size: 600% 600%;
   animation: animateBg 10s ease-in-out infinite;
 }
@@ -44,7 +43,7 @@ section {
     position: relative;
     display: flex;
     flex-direction: column;
-    background: rgba(30, 20, 25, 0.98);
+    background: var(--background-clr);
     border: 2px solid #ff2d2d;
     border-radius: 32px;
     justify-content: center;
@@ -70,7 +69,7 @@ section {
     right: 18px;
     background: transparent;
     border: none;
-    color: #fff;
+    color: var(--text-clr);
     font-size: 2rem;
     cursor: pointer;
     z-index: 10;
@@ -82,7 +81,7 @@ section {
 
 h2 {
     font-size: 2em;
-    color: #fff;
+    color: var(--text-clr);
     text-align: center;
 }
 
@@ -90,7 +89,7 @@ h2 {
     position: relative;
     width: 100%;
     margin: 24px 0;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid var(--text-clr);
 }
 
 .inputBox label {
@@ -99,7 +98,7 @@ h2 {
     left: 5px;
     transform: translateY(-50%);
     font-size: 0.95em;
-    color: #fff;
+    color: var(--text-clr);
     pointer-events: none;
     transition: .5s;
 }
@@ -109,7 +108,7 @@ h2 {
 .inputBox input:not(:placeholder-shown) ~ label {
     top: -5px;
     left: 5px;
-    color: #fff;
+    color: var(--text-clr);
     font-size: 0.8em;
 }
 
@@ -120,7 +119,7 @@ h2 {
     border: none;
     outline: none;
     font-size: 0.95em;
-    color: #fff;
+    color: var(--text-clr);
     padding: 0 35px 0 5px;
 }
 
@@ -130,7 +129,7 @@ h2 {
     right: 8px;
     transform: translateY(-50%);
     font-size: 1.2em;
-    color: #fff;
+    color: var(--text-clr);
     line-height: 57px;
 }
 
@@ -141,7 +140,7 @@ h2 {
     gap: 32px;
     margin: -10px 0 10px;
     font-size: .9em;
-    color: #fff;
+    color: var(--text-clr);
     width: 100%;
 }
 
@@ -155,7 +154,7 @@ h2 {
 }
 
 .rememberForgot a {
-    color: #fff;
+    color: var(--text-clr);
     text-decoration: none;
     margin-left: auto;
     text-align: right;
@@ -171,7 +170,7 @@ button[type="submit"] {
     border: none;
     outline: none;
     background: #ff2d2d;
-    color: #fff;
+    color: var(--text-clr);
     font-size: 1.1em;
     cursor: pointer;
     border-radius: 40px;
@@ -187,13 +186,13 @@ button[type="submit"]:hover {
 
 .registerLink {
     font-size: 0.9em;
-    color: #ffffff;
+    color: var(--text-clr);
     text-align: center;
     margin: 25px 0 10px;
 }
 
 .registerLink p a {
-    color: #fff;
+    color: var(--text-clr);
     text-decoration: none;
     font-weight: 600;
 }
@@ -202,16 +201,14 @@ button[type="submit"]:hover {
     text-decoration: underline;
 }
 
-/* Popup alert винаги най-отгоре */
+/* Popup alert always on top */
 .pfPopupBg {
     z-index: 20000 !important;
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
 }
 
-/* Махнато: .roleChoice (Потребител/Работник) */
 
-/* Останалите стилове за login/register форми */
 .registerForgotLinks {
     display: flex;
     justify-content: center;
@@ -221,7 +218,7 @@ button[type="submit"]:hover {
     font-size: 0.98em;
 }
 .registerForgotLinks a {
-    color: #fff;
+    color: var(--text-clr);
     text-decoration: none;
     font-weight: 600;
     transition: color 0.2s;
@@ -231,7 +228,7 @@ button[type="submit"]:hover {
     color: #ff2d2d;
 }
 .or-separator {
-    color: #fff;
+    color: var(--text-clr);
     opacity: 0.7;
     font-weight: 400;
 }
