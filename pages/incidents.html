@@ -117,12 +117,29 @@
             <p><span class="material-symbols-outlined infoIcon">schedule</span> Час на подаване: 12:35</p>
             <p><span class="material-symbols-outlined infoIcon">location_on</span> Адрес или квартал:  ул. Сливница №11-13 8000 Бургас</p>
             <p><span class="material-symbols-outlined infoIcon">warning</span> Тип инцидент: Пожар</p>
-            <p><span class="material-symbols-outlined infoIcon">priority_high</span> Статус: Непотвърден</p>
+            <p><span class="material-symbols-outlined infoIcon">priority_high</span> Статус: Очаква изпращане</p>
         </div>
     </div>
     <button class="sendTeamBtn">Изпрати екип</button>
     <div id="secondMap" class="map"></div>
 </div>
+<div class="incident" id="thirdIncident">
+    <div class="incidentIcon disabledfireIcon">
+        <span class="material-symbols-outlined fireIcon">local_fire_department</span>
+    </div>
+    <div class="incidentDetails">
+        <h3>Кликни върху инцидент за повече информация</h3>
+        <div class="incidentInformation">
+            <p><span class="material-symbols-outlined infoIcon">schedule</span> Час на подаване: 10:50</p>
+            <p><span class="material-symbols-outlined infoIcon">location_on</span> Адрес или квартал: ул. Христо Ботев №5, Бургас</p>
+            <p><span class="material-symbols-outlined infoIcon">warning</span> Тип инцидент: Пожар</p>
+            <p><span class="material-symbols-outlined infoIcon">priority_high</span> Статус: Изпратен екип</p>
+        </div>
+    </div>
+    <button class="sendTeamBtn" disabled>Изпрати екип</button>
+    <div id="thirdMap" class="map"></div>
+</div>
+
     </div>
     <div class="incidentTeamChoice" style="display: none">
     <button class="backBtnSecond">⬅ Назад</button>
@@ -182,7 +199,7 @@
             <p><span class="material-symbols-outlined infoIcon">schedule</span> Час на подаване: 12:35</p>
             <p><span class="material-symbols-outlined infoIcon">location_on</span> Адрес:  ул. Сливница №11-13 8000 Бургас</p>
             <p><span class="material-symbols-outlined infoIcon">warning</span> Тип инцидент: Пожар</p>
-            <p><span class="material-symbols-outlined infoIcon">priority_high</span> Статус: Непотвърден</p>
+            <p><span class="material-symbols-outlined infoIcon">priority_high</span> Статус: Очаква изпращане</p>
             <p><span class="material-symbols-outlined infoIcon">person</span> Подател: Мария Георгиева</p>
             <p><span class="material-symbols-outlined infoIcon">call</span> Телефон: +0881193236</p>
             <p><span class="material-symbols-outlined infoIcon">description</span> Описание: Гъст дим от втория етаж, възможно наличие на хора вътре.</p>
@@ -191,9 +208,25 @@
         <div id="secondExpandedMap" class="map"></div>
     </div>
     </div>
+    <div class="incidentDetailsThird" id="incidentExpandedInformation">
+    <h2>Инцидент 3 - Детайли</h2>
+    <div class="incidentDetailsWrapper">
+        <div class="incidentDetails">
+            <p><span class="material-symbols-outlined infoIcon">schedule</span> Час на подаване: 10:50</p>
+            <p><span class="material-symbols-outlined infoIcon">location_on</span> Адрес: ул. Христо Ботев №5, Бургас</p>
+            <p><span class="material-symbols-outlined infoIcon">warning</span> Тип инцидент: Пожар</p>
+            <p><span class="material-symbols-outlined infoIcon">priority_high</span> Статус: Изпратен екип</p>
+            <p><span class="material-symbols-outlined infoIcon">person</span> Подател: Георги Стоянов</p>
+            <p><span class="material-symbols-outlined infoIcon">call</span> Телефон: +0888321789</p>
+            <p><span class="material-symbols-outlined infoIcon">description</span> Описание: Запалване в мазето на жилищен блок</p>
+            <button class="expandedSendTeamBtn" disabled>Изпрати екип</button>
+        </div>
+        <div id="thirdExpandedMap" class="map"></div>
+    </div>
 </div>
 </div>
-    <div id="customAlert" class="custom-alert">
+</div>
+    <div class="customAlert">
   <span class="material-symbols-outlined" style="vertical-align: middle; margin-right: 8px;">Check</span>
   Изпратено уведомление до екип
 </div>

@@ -406,11 +406,11 @@
     color: #bbb;
 }
 
-.custom-alert {
+.customAlert {
   position: fixed;
   top: 20px;
   right: 20px;
-  background-color: #4caf50; /* green */
+  background-color: #4caf50; 
   color: white;
   padding: 15px 25px;
   border-radius: 5px;
@@ -421,7 +421,25 @@
   z-index: 9999;
 }
 
-.custom-alert.show {
+.customAlert.show {
   opacity: 1;
   pointer-events: auto;
+}
+
+.expandedSendTeamBtn:disabled {
+    background-color: #666666;
+    cursor: not-allowed;
+    box-shadow: none;
+    color: #bbb;
+}
+
+.sendTeamBtn:disabled {
+    background-color: #666666;
+    cursor: not-allowed;
+    box-shadow: none;
+    color: #bbb;
+}
+
+.disabledfireIcon{
+    background-color: #666666;
 }
