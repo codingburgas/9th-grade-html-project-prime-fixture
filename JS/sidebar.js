@@ -22,3 +22,36 @@ sideBarToggler.addEventListener("click", () => {
     const isNowCollapsed = sidebar.classList.contains("collapsed");
     localStorage.setItem("sidebar-collapsed", isNowCollapsed);
 });
+
+
+const themeToggle = document.querySelector('.themeSwitch input');
+const currentTheme = localStorage.getItem('theme');
+
+
+if (currentTheme === 'whiteTheme') {
+    document.body.classList.add('whiteTheme');
+    themeToggle.checked = true;
+}
+
+themeToggle.addEventListener('change', function() {
+    if (this.checked) {
+        document.body.classList.add('whiteTheme');
+        localStorage.setItem('theme', 'whiteTheme');
+    } else {
+        document.body.classList.remove('whiteTheme');
+        localStorage.setItem('theme', '');
+    }
+    
+
+    document.body.style.animation = 'none';
+    requestAnimationFrame(() => {
+        document.body.style.animation = '';
+    });
+});
+
+document.querySelectorAll('.themeToggleBtn .nav-icon').forEach(icon => {
+    icon.style.cursor = 'pointer';
+    icon.addEventListener('click', () => {
+        themeToggle.click(); 
+    });
+});

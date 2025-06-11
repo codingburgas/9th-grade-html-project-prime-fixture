@@ -117,7 +117,7 @@
     display: none;
     pointer-events: none;
     left: calc(100% + 25px);
-    color:#1E1E1E;
+    color:var(--text-clr);
     padding: 6px 12px;
     border-radius: 8px;
     background: var(--secondarytext-clr);
@@ -153,4 +153,131 @@
 /*The * means "all child elements" inside the sidebar — like buttons, text, icons — so nothing inside will animate either.*/
 .sidebar.no-transition * {
     transition: none !important;
+}
+
+
+
+.themeSwitch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+    margin-left: 10px;
+}
+
+.themeSwitch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--secondarybackground-clr);
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--background-clr);
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--secondarybackground-clr);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+    background-color: var(--background-clr);
+}
+
+
+.lightIcon {
+    display: none;
+    color: var(--text-clr);
+}
+
+.darkIcon {
+    display: inline-block;
+    color: var(--text-clr);
+}
+
+body.whiteTheme .darkIcon {
+    display: none;
+}
+
+body.whiteTheme .lightIcon {
+    display: inline-block;
+}
+
+.sidebar.collapsed .themeSwitch {
+    display: none;
+}
+
+.themeToggleBtn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    padding-right: 10px;
+    
+}
+
+
+.themeToggleBtn .navLabel {
+    order: 2; 
+    margin-left: auto; 
+    padding-right: 10px; 
+}
+
+
+.themeToggleBtn .icon-container {
+    display: flex;
+    position: absolute;
+    left: 15px;
+}
+
+
+.themeToggleBtn .nav-icon {
+    position: absolute;
+    transition: opacity 0.3s ease;
+}
+
+
+.themeSwitch {
+    order: 3; 
+    margin-left: auto; 
+}
+
+
+.sidebar.collapsed .themeToggleBtn .navLabel {
+    display: none; 
+}
+
+.sidebar.collapsed .themeSwitch {
+    display: none; 
+}
+
+.sidebar.collapsed .themeToggleBtn .nav-icon {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.themeToggleBtn:hover {
+    color: var(--text-clr) !important;
+    background: transparent !important;
 }

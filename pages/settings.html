@@ -69,12 +69,17 @@
                 </ul>
                 <ul class="navList secondaryNav">
                     <li class="navItem">
-                        <a href="#" class="navLink">
-                            <span class="nav-icon material-symbols-outlined">account_circle</span>
-                            <span class="navLabel">Акаунт</span>
-                        </a>
-                        <span class="navTooltip">Акаунт</span>
-                    </li>
+                    <div class="navLink themeToggleBtn">
+                        <span class="nav-icon material-symbols-outlined darkIcon">dark_mode</span>
+                        <span class="nav-icon material-symbols-outlined lightIcon">light_mode</span>
+                        <span class="navLabel">Тема</span>
+                            <label class="themeSwitch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                    </div>
+                <span class="navTooltip">Промяна на темата</span>
+                </li>
                     <li class="navItem">
                         <a href="#" class="navLink logoutBtn">
                             <span class="nav-icon material-symbols-outlined">logout</span>
