@@ -1,3 +1,4 @@
+   const textColor = getComputedStyle(document.documentElement).getPropertyValue('--text-clr').trim();
    const neighborhoods = ['Славейков', 'Меден рудник', 'Лазур', 'Център', 'Сарафово'];
     const fireCounts = [22, 35, 10, 12, 15];
 
@@ -18,8 +19,7 @@
         },
         options: {
             responsive: true,
-            maintainAspectRatio: true,
-            aspectRatio: 2,
+            maintainAspectRatio: false,
             plugins: {
                 legend: {
                     display: false
@@ -31,7 +31,7 @@
                         size: 18,
                         weight: 'bold'
                     },
-                    color: '#374151'
+                    color: textColor
                 }
             },
             scales: {
@@ -44,10 +44,10 @@
                             size: 14,
                             weight: '600'
                         },
-                        color: '#4b5563'
+                        color: textColor
                     },
                     ticks: {
-                        color: '#6b7280'
+                        color: textColor
                     },
                     grid: {
                         color: 'rgba(209, 213, 219, 0.3)'
@@ -61,10 +61,10 @@
                             size: 14,
                             weight: '600'
                         },
-                        color: '#4b5563'
+                        color: textColor
                     },
                     ticks: {
-                        color: '#6b7280'
+                        color: textColor
                     },
                     grid: {
                         display: false
@@ -96,7 +96,6 @@ const responseTimeChart = new Chart(ctx2, {
             data: avgResponseTimes,
             fill: false,
             borderColor: '#2980b9',
-            backgroundColor: '#3498db',
             tension: 0.3,
             pointStyle: 'circle',
             pointRadius: 6,
@@ -105,7 +104,7 @@ const responseTimeChart = new Chart(ctx2, {
     },
     options: {
         responsive: true,
-        aspectRatio: 2,
+        maintainAspectRatio: false,
         plugins: {
             legend: {
                 display: false
@@ -117,7 +116,7 @@ const responseTimeChart = new Chart(ctx2, {
                     size: 18,
                     weight: 'bold'
                 },
-                color: '#374151'
+                color: textColor
             }
         },
         scales: {
@@ -130,10 +129,10 @@ const responseTimeChart = new Chart(ctx2, {
                         size: 14,
                         weight: '600'
                     },
-                    color: '#4b5563'
+                    color: textColor
                 },
                 ticks: {
-                    color: '#6b7280'
+                    color: textColor
                 },
                 grid: {
                     color: 'rgba(209, 213, 219, 0.3)'
@@ -147,10 +146,10 @@ const responseTimeChart = new Chart(ctx2, {
                         size: 14,
                         weight: '600'
                     },
-                    color: '#4b5563'
+                    color: textColor
                 },
                 ticks: {
-                    color: '#6b7280'
+                    color: textColor
                 },
                 grid: {
                     display: false
@@ -182,13 +181,16 @@ const incidentTypesChart = new Chart(ctxIncident, {
   options: {
     responsive: true,
     maintainAspectRatio: false,
+    cutout: '60%',
     plugins: {
       legend: {
         position: 'bottom',
         labels: {
-          color: '#374151',
-          font: {
-            size: 14,
+            color: textColor,
+            padding: 20,
+            boxWidth: 20,
+            font: {
+            size: 16,
             weight: '500'
           }
         }

@@ -1,5 +1,5 @@
 .chartContainer {
-  background-color: #ffffff;
+  background-color: #2a2a2a;
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
@@ -19,7 +19,7 @@ canvas {
 .note {
   margin-top: 20px;
   font-size: 0.9em;
-  color: #6b7280;
+  color: var(--text-clr);
   text-align: center;
 }
 
@@ -65,40 +65,67 @@ canvas {
   grid-template-rows: auto auto;
   gap: 2rem;
   width: 100%;
+  padding: 1rem;
 }
 
 .chartSmall {
-  background-color: #ffffff;
-  padding: 25px;
+  background-color: #2a2a2a;
+  padding: 20px;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 400px;
+  height: 380px;
+}
+
+.chartSmall h1 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: var(--text-clr);
+  font-weight: 600;
+}
+.chartSmall canvas {
+  width: 100%;
+  height: 300px;
+  max-height: 300px;
 }
 
 .chartWide {
   grid-column: span 2;
-  background-color: #ffffff;
-  padding: 40px;
+  background-color: #2a2a2a;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 500px;
+  height: 600px;
+  padding: 20px;
+  position: relative;
+}
+
+.chartWide h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: var(--text-clr);
+  font-weight: 600;
+}
+
+.chartWide canvas {
+  width: 100%;
+  height: 100%;
+  max-height: 500px;
 }
 
 .chartScrollArea {
-    flex: 1; 
-    max-height: 100%;
-    overflow-y: auto;
-    margin-top: 70px; 
-    border-radius: 12px;    
-    padding-right: 8px; 
-    height: 600px;
+  flex: 1;
+  overflow-y: auto;
+  margin-top: 70px;
+  border-radius: 12px;
+  padding-right: 8px;
+  height: calc(100% - 70px);
 }
+
 .chartScrollArea::-webkit-scrollbar {
     width: 10px;
 }
@@ -131,4 +158,29 @@ canvas {
     top: 20px;
     left: 100px;
     color: var(--text-clr);
+}
+
+.underStatsDiv {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom:30px;
+}
+
+.individualStatsDiv {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  width:390px;
+  height:200px;
+  text-align: center;
+}
+
+.individualStatsDiv h1 {
+  color:var(--text-clr);
+}
+.individualStatsDiv p {
+  color:var(--text-clr);
 }
